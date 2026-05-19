@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=VDC Pin=C3-1
+Added Pin To Net: NetName=VDC Pin=J1-1
+Added Pin To Net: NetName=VDC Pin=R3-1
+Added Room: Name=Sheet4_Power_Supply

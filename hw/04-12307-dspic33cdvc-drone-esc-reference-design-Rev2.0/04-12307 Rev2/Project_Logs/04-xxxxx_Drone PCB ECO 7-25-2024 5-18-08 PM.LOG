@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=IA Pin=R53-2
+Removed Pin From Net: NetName=IBUS_IC Pin=R70-2
+Removed Pin From Net: NetName=IB Pin=R86-2
+Removed Member From Class: ClassName=Sheet1_dsPIC33CDV+OpAmp Member=R53
+Removed Member From Class: ClassName=Sheet1_dsPIC33CDV+OpAmp Member=R70
+Removed Member From Class: ClassName=Sheet1_dsPIC33CDV+OpAmp Member=R86
+Added Pin To Net: NetName=IA Pin=R52-2
+Added Pin To Net: NetName=IBUS_IC Pin=R69-2
+Added Pin To Net: NetName=IB Pin=R85-2

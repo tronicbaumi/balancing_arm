@@ -1,0 +1,27 @@
+Added Component: Designator=R154(RES_C_0603)
+Add component (AddParameter): Name = "Category"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://chn-vm-apps.microchip.com/mchprepo/parts/Datasheets/AOA0000CE2.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Composition"; Value = "TKF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Description_"; Value = "RES TKF 332k 1% 1/10W SMD 0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer 1"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number 1"; Value = "ERJ-3EKF3323V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MCHP-ID"; Value = "RES1168"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-55C to +155C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Owner"; Value = "Bogdan P (M91398)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Populated"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "1/10W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Quantity Override"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Revision"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Status"; Value = "Production"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "P332KHCT-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Temperature Coeffcient"; Value = "100ppm/C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "RES SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "332k"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage"; Value = "75V"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=HS_GATE_A Pin=R154-1
+Added Pin To Net: NetName=PHASE_A Pin=R154-2
+Added Member To Class: ClassName=Sheet2_Inverter_GateDriver Member=Component R154 Resistor

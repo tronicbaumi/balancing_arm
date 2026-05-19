@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=PHASE_C Pin=R110-1
+Removed Pin From Net: NetName=PHASE_A Pin=R111-1
+Removed Pin From Net: NetName=VC Pin=R114-2
+Removed Pin From Net: NetName=VA Pin=R115-2
+Removed Pin From Net: NetName=NetC76_2 Pin=VA-1
+Removed Pin From Net: NetName=NetC75_2 Pin=VC-1
+Added Pin To Net: NetName=PHASE_A Pin=R110-1
+Added Pin To Net: NetName=PHASE_C Pin=R111-1
+Added Pin To Net: NetName=VA Pin=R114-2
+Added Pin To Net: NetName=VC Pin=R115-2
+Added Pin To Net: NetName=NetC75_2 Pin=VA-1
+Added Pin To Net: NetName=NetC76_2 Pin=VC-1

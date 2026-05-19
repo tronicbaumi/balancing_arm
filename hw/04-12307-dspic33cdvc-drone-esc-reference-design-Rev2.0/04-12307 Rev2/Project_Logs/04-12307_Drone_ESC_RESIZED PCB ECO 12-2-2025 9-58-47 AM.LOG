@@ -1,0 +1,51 @@
+Removed Pin From Net: NetName=RSVD2 Pin=J4-2
+Removed Pin From Net: NetName=RSVD3 Pin=J4-3
+Removed Pin From Net: NetName=RSVD4 Pin=J4-4
+Removed Pin From Net: NetName=RSVD5 Pin=J4-5
+Removed Pin From Net: NetName=RSVD6 Pin=J4-6
+Removed Pin From Net: NetName=PHASE_B Pin=m2-1
+Removed Pin From Net: NetName=PHASE_A Pin=m4-1
+Change Component Footprint: Designator=J4 Old Footprint=HDR_M_2.54_1x6 New Footprint=HDR_M_2.54_1x3_TH_V_SAM_TSW-103-08-G-S
+Change Component Comment : Designator=J4 Old Comment=Header 1x6 New Comment=Header 1x3
+Change component parameters: Designator = "J4" ("J4"); Footprint = "HDR_M_2.54_1x6"; UniqueID = "\RAACPTBI" ("\RAACPTBI")
+Change component parameters (AddParameter): Name = "Assembly Type"; Value = "TH"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Category"; Value = "Connector"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "SVN Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://chn-vm-apps.microchip.com/mchprepo/parts/Datasheets/tsw_th.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Local Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Datasheets\tsw_th.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "Open Symbol"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\LibraryRefs\Header 1x3.SchLib"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink4Description"; Value = "Open Footprint"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink4URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\Footprints\HDR_M_2.54_1x3_TH_V_SAM_TSW-103-08-G-S.PcbLib"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink5Description"; Value = "Open Footprint 2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink6Description"; Value = "Open Footprint 3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink7Description"; Value = "Open Footprint 4"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current"; Value = "6.3A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Description_"; Value = "CON HDR-2.54 Male 1x3 Gold 5.84MH  TH VERT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Dev Tools Status"; Value = "Production"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "Samtec"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "TSW-103-08-G-S"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MCHP-ID"; Value = "CON2895"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-55C to +125C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Owner"; Value = "Dragos Danaila"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Populated"; Value = "YES"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Quantity Override"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Restricted Sourcing"; Value = "No"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Revision"; Value = "3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Status"; Value = "MCL Design"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "SAM1038-03-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Symbol"; Value = "Header 1x3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Header 2.54mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "HDR-2.54 Male 1x3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "550VAC"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=AUX1 Pin=J4-1
+Added Net: Name=AUX1
+Added Pin To Net: NetName=AUX2 Pin=J4-2
+Added Net: Name=AUX2
+Added Pin To Net: NetName=AUX3 Pin=J4-3
+Added Net: Name=AUX3
+Added Pin To Net: NetName=INPUT_FMU_PWM2 Pin=R1-2
+Added Pin To Net: NetName=INPUT_FMU_PWM2 Pin=U9-21
+Added Net: Name=INPUT_FMU_PWM2

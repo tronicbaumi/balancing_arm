@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=RSVD7 Pin=U9-21
+Removed Pin From Net: NetName=RSVD2 Pin=U9-28
+Removed Pin From Net: NetName=RSVD3 Pin=U9-36
+Removed Pin From Net: NetName=RSVD4 Pin=U9-37
+Removed Pin From Net: NetName=RSVD6 Pin=U9-38
+Removed Pin From Net: NetName=RSVD5 Pin=U9-39
+Added Pin To Net: NetName=VC Pin=R114-2
+Added Pin To Net: NetName=VA Pin=R115-2
+Added Pin To Net: NetName=VB Pin=R118-2
+Added Pin To Net: NetName=RSVD2 Pin=U9-21
+Added Pin To Net: NetName=RSVD3 Pin=U9-28
+Added Pin To Net: NetName=RSVD4 Pin=U9-36
+Added Pin To Net: NetName=RSVD5 Pin=U9-37
+Added Pin To Net: NetName=RSVD7 Pin=U9-38
+Added Pin To Net: NetName=RSVD6 Pin=U9-39

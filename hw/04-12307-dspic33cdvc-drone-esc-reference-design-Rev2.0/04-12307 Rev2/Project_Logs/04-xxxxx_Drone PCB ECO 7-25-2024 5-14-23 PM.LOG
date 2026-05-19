@@ -1,0 +1,268 @@
+Removed Pin From Net: NetName=DRV_VBOOT Pin=C48-1
+Removed Pin From Net: NetName=NetC69_1 Pin=L2-2
+Removed Pin From Net: NetName=NetC71_1 Pin=L2-3
+Removed Pin From Net: NetName=NetC71_1 Pin=R7-2
+Removed Pin From Net: NetName=NetC69_1 Pin=R8-2
+Removed Pin From Net: NetName=SHUNT_IA_N Pin=R21-1
+Removed Pin From Net: NetName=SHUNT_IA_P Pin=R58-1
+Removed Pin From Net: NetName=GND Pin=R67-1
+Removed Pin From Net: NetName=SHUNT_IA_N Pin=R74-1
+Removed Pin From Net: NetName=SHUNT_IA_N Pin=R83-1
+Removed Pin From Net: NetName=SHUNT_IB_P Pin=R91-1
+Removed Pin From Net: NetName=DRV_VBOOT Pin=U9-4
+Removed Member From Class: ClassName=Sheet4_CAN_Interface Member=L2
+Removed Member From Class: ClassName=Sheet4_CAN_Interface Member=R7
+Removed Member From Class: ClassName=Sheet4_CAN_Interface Member=R8
+Change Component Footprint: Designator=C3 Old Footprint=CAP_RAD_P5D10H20 New Footprint=CAP_RAD_P3.5D8H13_WE
+Change component parameters: Designator = "C3" ("C3"); Footprint = "CAP_RAD_P5D10H20"; UniqueID = "\AGVSQKYZ" ("\AGVSQKYZ")
+Change component parameters (AddParameter): Name = "Category"; Value = "Capacitor"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "SVN Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://chn-vm-apps.microchip.com/mchprepo/parts/Datasheets/860020474014.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Local Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Datasheets\860020474014.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "Open Symbol"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\LibraryRefs\Capacitor POL.SchLib"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink4Description"; Value = "Open Footprint"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink4URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\Footprints\CAP_RAD_P3.5D8H13_WE.PcbLib"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink5Description"; Value = "Open Footprint 2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink6Description"; Value = "Open Footprint 3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink7Description"; Value = "Open Footprint 4"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Description_"; Value = "CAP ALU 470uF 25V 20% RAD P3.5D8H13"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Dev Tools Status"; Value = "Design"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "Würth Elektronik"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "860020474014"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MCHP-ID"; Value = "CAP3116"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Temperature"; Value = "-40C to +105C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Owner"; Value = "Severino Balong Jr."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "P3.5D8H13"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Populated"; Value = "YES"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Quantity Override"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Restricted Sourcing"; Value = "No"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Revision"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Status"; Value = "MCL Design"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "732-8831-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Symbol"; Value = "Capacitor POL"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Aluminum"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "470uF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Change component parameters: Designator = "J1" ("J1"); Footprint = "CON TERMINAL XT30U-M 5mm 1x2 Male 30A TH V"; UniqueID = "\EMYNCXIC" ("\EMYNCXIC")
+Change component parameters (AddParameter): Name = "BOM Notes"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Category"; Value = "Connector"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "SVN Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://chn-vm-apps.microchip.com/mchprepo/parts/Datasheets/XT30U SPEC.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "Local Datasheet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Datasheets\XT30U SPEC.pdf"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "Open Symbol"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\LibraryRefs\CON 1x2 POLARIZED.SchLib"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink4Description"; Value = "Open Footprint"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink4URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\Footprints\CON TERMINAL XT30U-M 5mm 1x2 Male 30A TH V.PcbLib"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink5Description"; Value = "Open Footprint 2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink6Description"; Value = "Open Footprint 3"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink7Description"; Value = "Open Footprint 4"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Current"; Value = "15A"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Description_"; Value = "CON POWER XT30U-M 5mm 1x2 Male 15A TH V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Dev Tools Status"; Value = "Design"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer 1"; Value = "AMASS"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number 1"; Value = "XT30U-M"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "MCHP-ID"; Value = "CON2207"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Owner"; Value = "Octavian Stroe"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Populated"; Value = "Yes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Quantity Override"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Revision"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Status"; Value = "MCL Design"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "TME"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "XT30U-M"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Symbol"; Value = "CON 1x2 POLARIZED"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Type"; Value = "Power"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "XT30U-M 1x2"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage"; Value = "500V"; VariantName = "[No Variations]"
+Added Component: Designator=NT1(NET_TIE_0.2mmx0.5mm)
+Add component (AddParameter): Name = "Category"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "SVN Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Local Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Open Symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\LibraryRefs\Net Tie.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4Description"; Value = "Open Footprint"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\Footprints\NET_TIE_0.2mmx0.5mm.PcbLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink5Description"; Value = "Open Footprint 2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink6Description"; Value = "Open Footprint 3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink7Description"; Value = "Open Footprint 4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Description_"; Value = "RES Net Tie SMD Net Tie 0.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dev Tools Status"; Value = "Design"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MCHP-ID"; Value = "RES2817"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Owner"; Value = "Cristina Salanti"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Populated"; Value = "DNP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Quantity Override"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Restricted Sourcing"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Revision"; Value = "A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Status"; Value = "MCL Design"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "Net Tie"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "RES SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "Net Tie"; VariantName = "[No Variations]"
+Added Component: Designator=NT2(NET_TIE_0.2mmx0.5mm)
+Add component (AddParameter): Name = "Category"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "SVN Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Local Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Open Symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\LibraryRefs\Net Tie.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4Description"; Value = "Open Footprint"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\Footprints\NET_TIE_0.2mmx0.5mm.PcbLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink5Description"; Value = "Open Footprint 2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink6Description"; Value = "Open Footprint 3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink7Description"; Value = "Open Footprint 4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Description_"; Value = "RES Net Tie SMD Net Tie 0.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dev Tools Status"; Value = "Design"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MCHP-ID"; Value = "RES2817"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Owner"; Value = "Cristina Salanti"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Populated"; Value = "DNP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Quantity Override"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Restricted Sourcing"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Revision"; Value = "A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Status"; Value = "MCL Design"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "Net Tie"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "RES SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "Net Tie"; VariantName = "[No Variations]"
+Added Component: Designator=NT3(NET_TIE_0.2mmx0.5mm)
+Add component (AddParameter): Name = "Category"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "SVN Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Local Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Open Symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\LibraryRefs\Net Tie.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4Description"; Value = "Open Footprint"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\Footprints\NET_TIE_0.2mmx0.5mm.PcbLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink5Description"; Value = "Open Footprint 2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink6Description"; Value = "Open Footprint 3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink7Description"; Value = "Open Footprint 4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Description_"; Value = "RES Net Tie SMD Net Tie 0.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dev Tools Status"; Value = "Design"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MCHP-ID"; Value = "RES2817"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Owner"; Value = "Cristina Salanti"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Populated"; Value = "DNP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Quantity Override"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Restricted Sourcing"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Revision"; Value = "A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Status"; Value = "MCL Design"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "Net Tie"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "RES SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "Net Tie"; VariantName = "[No Variations]"
+Added Component: Designator=NT4(NET_TIE_0.2mmx0.5mm)
+Add component (AddParameter): Name = "Category"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "SVN Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Local Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Open Symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\LibraryRefs\Net Tie.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4Description"; Value = "Open Footprint"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\Footprints\NET_TIE_0.2mmx0.5mm.PcbLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink5Description"; Value = "Open Footprint 2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink6Description"; Value = "Open Footprint 3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink7Description"; Value = "Open Footprint 4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Description_"; Value = "RES Net Tie SMD Net Tie 0.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dev Tools Status"; Value = "Design"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MCHP-ID"; Value = "RES2817"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Owner"; Value = "Cristina Salanti"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Populated"; Value = "DNP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Quantity Override"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Restricted Sourcing"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Revision"; Value = "A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Status"; Value = "MCL Design"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "Net Tie"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "RES SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "Net Tie"; VariantName = "[No Variations]"
+Added Component: Designator=NT5(NET_TIE_0.2mmx0.5mm)
+Add component (AddParameter): Name = "Category"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "SVN Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Local Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Open Symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\LibraryRefs\Net Tie.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4Description"; Value = "Open Footprint"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\Footprints\NET_TIE_0.2mmx0.5mm.PcbLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink5Description"; Value = "Open Footprint 2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink6Description"; Value = "Open Footprint 3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink7Description"; Value = "Open Footprint 4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Description_"; Value = "RES Net Tie SMD Net Tie 0.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dev Tools Status"; Value = "Design"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MCHP-ID"; Value = "RES2817"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Owner"; Value = "Cristina Salanti"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Populated"; Value = "DNP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Quantity Override"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Restricted Sourcing"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Revision"; Value = "A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Status"; Value = "MCL Design"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "Net Tie"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "RES SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "Net Tie"; VariantName = "[No Variations]"
+Added Component: Designator=NT6(NET_TIE_0.2mmx0.5mm)
+Add component (AddParameter): Name = "Category"; Value = "Resistor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "SVN Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Local Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Open Symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\LibraryRefs\Net Tie.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4Description"; Value = "Open Footprint"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\Footprints\NET_TIE_0.2mmx0.5mm.PcbLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink5Description"; Value = "Open Footprint 2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink6Description"; Value = "Open Footprint 3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink7Description"; Value = "Open Footprint 4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Description_"; Value = "RES Net Tie SMD Net Tie 0.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dev Tools Status"; Value = "Design"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MCHP-ID"; Value = "RES2817"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Owner"; Value = "Cristina Salanti"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0.2mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Populated"; Value = "DNP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Quantity Override"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Restricted Sourcing"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Revision"; Value = "A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Status"; Value = "MCL Design"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "Net Tie"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "RES SMD"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "Net Tie"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=SHUNT_IB_P Pin=NT1-2
+Added Pin To Net: NetName=SHUNT_IA_P Pin=NT2-2
+Added Pin To Net: NetName=SHUNT_IA_N Pin=NT3-2
+Added Pin To Net: NetName=SHUNT_IA_N Pin=NT4-2
+Added Pin To Net: NetName=SHUNT_IA_N Pin=NT5-2
+Added Pin To Net: NetName=GND Pin=NT6-2
+Added Pin To Net: NetName=DRV_VBOOT Pin=R1-2
+Added Pin To Net: NetName=NetC71_1 Pin=U9-49
+Added Pin To Net: NetName=NetC69_1 Pin=U9-50
+Change Net Name : Old Net Name=DRV_VBOOT New Net Name=VBOOT
+Change Net Name : Old Net Name=NetC69_1 New Net Name=dsPIC_PIN_50
+Change Net Name : Old Net Name=NetC71_1 New Net Name=dsPIC_PIN_49
+Change Net Name : Old Net Name=SHUNT_IA_N New Net Name=NetC109_1
+Change Net Name : Old Net Name=SHUNT_IA_P New Net Name=NetC110_1
+Change Net Name : Old Net Name=SHUNT_IB_P New Net Name=NetC108_1
+Added Pin To Net: NetName=DRV_VBOOT Pin=C48-1
+Added Pin To Net: NetName=DRV_VBOOT Pin=U9-4
+Added Net: Name=DRV_VBOOT
+Added Pin To Net: NetName=SHUNT_IA_N Pin=NT3-1
+Added Pin To Net: NetName=SHUNT_IA_N Pin=R21-1
+Added Net: Name=SHUNT_IA_N
+Added Pin To Net: NetName=SHUNT_IA_P Pin=NT2-1
+Added Pin To Net: NetName=SHUNT_IA_P Pin=R58-1
+Added Net: Name=SHUNT_IA_P
+Added Pin To Net: NetName=SHUNT_IB_N Pin=NT5-1
+Added Pin To Net: NetName=SHUNT_IB_N Pin=R83-1
+Added Net: Name=SHUNT_IB_N
+Added Pin To Net: NetName=SHUNT_IB_P Pin=NT1-1
+Added Pin To Net: NetName=SHUNT_IB_P Pin=R91-1
+Added Net: Name=SHUNT_IB_P
+Added Pin To Net: NetName=SHUNT_IBUS_N Pin=NT6-1
+Added Pin To Net: NetName=SHUNT_IBUS_N Pin=R67-1
+Added Net: Name=SHUNT_IBUS_N
+Added Pin To Net: NetName=SHUNT_IBUS_P Pin=NT4-1
+Added Pin To Net: NetName=SHUNT_IBUS_P Pin=R74-1
+Added Net: Name=SHUNT_IBUS_P
+Added Member To Class: ClassName=Sheet3_SenseCkts_Programming_Interface Member=Component HVDD Test Point No BOM
+Added Member To Class: ClassName=Sheet2_Inverter_GateDriver Member=Component NT1 Net Tie
+Added Member To Class: ClassName=Sheet2_Inverter_GateDriver Member=Component NT2 Net Tie
+Added Member To Class: ClassName=Sheet2_Inverter_GateDriver Member=Component NT3 Net Tie
+Added Member To Class: ClassName=Sheet2_Inverter_GateDriver Member=Component NT4 Net Tie
+Added Member To Class: ClassName=Sheet2_Inverter_GateDriver Member=Component NT5 Net Tie
+Added Member To Class: ClassName=Sheet2_Inverter_GateDriver Member=Component NT6 Net Tie
+Added Member To Class: ClassName=Sheet2_Inverter_GateDriver Member=Component PHASE_B Test Point No BOM

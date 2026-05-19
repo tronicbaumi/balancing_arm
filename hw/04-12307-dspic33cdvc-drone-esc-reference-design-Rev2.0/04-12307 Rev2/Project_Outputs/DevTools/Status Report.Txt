@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 4:25:52 PM On 1/30/2026
+
+Output: Test Point Report
+Type  : Test Points
+From  : PCB Document [04-12307_Drone_ESC.PcbDoc]
+   Generated File[05-12307-R2_IPC.ipc]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 4:25:52 PM On 1/30/2026

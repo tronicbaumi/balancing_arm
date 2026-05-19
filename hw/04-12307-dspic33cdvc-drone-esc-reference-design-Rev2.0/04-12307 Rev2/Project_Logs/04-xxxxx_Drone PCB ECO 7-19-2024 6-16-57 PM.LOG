@@ -1,0 +1,17 @@
+Removed Member From Class: ClassName=Sheet1_dsPIC33CDV+OpAmp Member=C5
+Added Pin To Net: NetName=dsPIC_VDD Pin=dsPIC_VDD-1
+Added Pin To Net: NetName=dsPIC_VDD Pin=R19-1
+Added Pin To Net: NetName=dsPIC_VDD Pin=R54-1
+Added Pin To Net: NetName=dsPIC_VDD Pin=R60-2
+Added Pin To Net: NetName=dsPIC_VDD Pin=R76-2
+Added Pin To Net: NetName=dsPIC_VDD Pin=R93-2
+Add Net: Net with name "dsPIC_DEBUG_RX" already exists
+Add Net: Net with name "dsPIC_DEBUG_TX" already exists
+Add Net: Net with name "RSVD1" already exists
+Add Net: Net with name "RSVD2" already exists
+Add Net: Net with name "RSVD3" already exists
+Add Net: Net with name "RSVD4" already exists
+Add Net: Net with name "RSVD5" already exists
+Add Net: Net with name "RSVD6" already exists
+Add Net: Net with name "RSVD7" already exists
+Added Member To Class: ClassName=Sheet1_dsPIC33CDV+OpAmp Member=Component C33 Capacitor NP

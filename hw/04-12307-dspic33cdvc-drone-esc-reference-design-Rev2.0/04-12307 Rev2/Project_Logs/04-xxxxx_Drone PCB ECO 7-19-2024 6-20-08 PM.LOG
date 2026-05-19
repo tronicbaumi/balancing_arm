@@ -1,0 +1,11 @@
+Added Pin To Net: NetName=dsPIC_DEBUG_RX Pin=J3-1
+Added Pin To Net: NetName=dsPIC_DEBUG_RX Pin=J3-2
+Added Pin To Net: NetName=dsPIC_DEBUG_RX Pin=R78-1
+Added Pin To Net: NetName=dsPIC_DEBUG_RX Pin=R79-1
+Add Net: Net with name "RSVD1" already exists
+Add Net: Net with name "RSVD2" already exists
+Add Net: Net with name "RSVD3" already exists
+Add Net: Net with name "RSVD4" already exists
+Add Net: Net with name "RSVD5" already exists
+Add Net: Net with name "RSVD6" already exists
+Add Net: Net with name "RSVD7" already exists

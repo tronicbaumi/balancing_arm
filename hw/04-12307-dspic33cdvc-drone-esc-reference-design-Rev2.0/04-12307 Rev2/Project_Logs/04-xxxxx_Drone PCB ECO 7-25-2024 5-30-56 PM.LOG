@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=VBOOT Pin=R164-2
+Removed Pin From Net: NetName=VBOOT Pin=R165-2
+Removed Pin From Net: NetName=VBOOT Pin=R166-2
+Removed Member From Class: ClassName=Sheet2_Inverter_GateDriver Member=R164
+Removed Member From Class: ClassName=Sheet2_Inverter_GateDriver Member=R165
+Removed Member From Class: ClassName=Sheet2_Inverter_GateDriver Member=R166
+Added Pin To Net: NetName=VBOOT Pin=D15-1
+Added Pin To Net: NetName=VBOOT Pin=D16-1
+Added Pin To Net: NetName=VBOOT Pin=D17-1

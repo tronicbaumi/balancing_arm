@@ -1,0 +1,32 @@
+Added Component: Designator=U6(SOT-23-3)
+Add component (AddParameter): Name = "BOM Notes"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Category"; Value = "MCHP-Analog"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "SVN Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "https://www.microchip.com/sitesearch/search/Product%20and%20Development%20Tools/MCP9700AT-E/TT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Local Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Open Symbol"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\LibraryRefs\MCP9700(A)_1(A) TO-92-3_SOT-23-3.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4Description"; Value = "Open Footprint"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink4URL"; Value = "C:\ALTIUM_WORK\00001_MCHP-CDB\Library\Footprints\SOT-23-3.PcbLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink5Description"; Value = "Open Footprint 2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink6Description"; Value = "Open Footprint 3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink7Description"; Value = "Open Footprint 4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Description_"; Value = "MCHP ANALOG TEMPERATURE SENSOR -40C to +150C MCP9700AT-E/TT SOT-23-3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Dev Tools Status"; Value = "Production"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer 1"; Value = "Microchip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number 1"; Value = "MCP9700AT-E/TT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MCHP-ID"; Value = "MIC3211"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temperature"; Value = "-40C to +125C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Populated"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Quantity Override"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Revision"; Value = "0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Status"; Value = "MCL Design"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Microchip"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "MCP9700AT-E/TT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Symbol"; Value = "MCP9700(A)_1(A) TO-92-3_SOT-23-3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Temperature Sensor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "MCP9700A"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=dsPIC_VDD Pin=U6-1
+Added Pin To Net: NetName=TEMP Pin=U6-2
+Added Pin To Net: NetName=GND Pin=U6-3
+Added Member To Class: ClassName=Sheet3_SenseCkts_Programming_Interface Member=Component U6 MCP9700(A)_1(A) TO-92-3_SOT-23-3

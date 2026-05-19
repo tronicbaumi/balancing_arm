@@ -1,0 +1,4 @@
+Removed Member From Class: ClassName=Sheet3_SenseCkts_Programming_Interface Member=J1
+Add Net: Net with name "VDC" already exists
+Added Member To Class: ClassName=Sheet3_SenseCkts_Programming_Interface Member=Component J2 Header 1x2
+Added Room: Name=Sheet4_Power_Supply

@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : C:\Users\A19614\OneDrive - Microchip Technology Inc\PROJECTS\WIP_Projects\MCU16_APPS\Drone_Propeller_dsPIC33CDV_MCU16\Rev1\PCB\04-xxxxx_Drone.PcbDoc
+Date         : 8/13/2024
+Time         : 9:44:59 AM
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, 325
+    Connections routed, 325
+    Connections remaining, 0
+count : 4

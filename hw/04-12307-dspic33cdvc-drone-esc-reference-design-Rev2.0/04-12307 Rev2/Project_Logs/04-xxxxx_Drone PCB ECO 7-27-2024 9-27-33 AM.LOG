@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=dsPIC_PIN_50 Pin=CANH-1
+Removed Pin From Net: NetName=dsPIC_PIN_49 Pin=CANL-1
+Removed Pin From Net: NetName=GND Pin=DGND-1
+Removed Member From Class: ClassName=Sheet4_CAN_Interface Member=CANH
+Removed Member From Class: ClassName=Sheet4_CAN_Interface Member=CANL
+Removed Member From Class: ClassName=Sheet4_CAN_Interface Member=DGND

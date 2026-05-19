@@ -1,0 +1,6 @@
+04-12307-dspic33cdvc-drone-esc-reference-design
+
+
+git clone httpsbitbucket.microchip.comscmdspichw04-12307-dspic33cdvc-drone-esc-reference-design.git
+
+04-xxxxx-dsPIC33C-CGD-PFC-ControlCard

@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=SHUNT_IA_N Pin=R21-1
+Removed Pin From Net: NetName=IA Pin=R52-2
+Removed Pin From Net: NetName=SHUNT_IA_P Pin=R58-1
+Removed Pin From Net: NetName=SHUNT_IBUS_N Pin=R67-1
+Removed Pin From Net: NetName=IBUS Pin=R69-2
+Removed Pin From Net: NetName=SHUNT_IBUS_P Pin=R74-1
+Removed Pin From Net: NetName=IA Pin=U9-14
+Removed Pin From Net: NetName=IBUS Pin=U9-33
+Added Pin To Net: NetName=SHUNT_IBUS_N Pin=R21-1
+Added Pin To Net: NetName=IBUS Pin=R52-2
+Added Pin To Net: NetName=SHUNT_IBUS_P Pin=R58-1
+Added Pin To Net: NetName=SHUNT_IA_N Pin=R67-1
+Added Pin To Net: NetName=IA Pin=R69-2
+Added Pin To Net: NetName=SHUNT_IA_P Pin=R74-1
+Added Pin To Net: NetName=IBUS Pin=U9-14
+Added Pin To Net: NetName=IA Pin=U9-33
+Added Member To Class: ClassName=Sheet3_SenseCkts_Programming_Interface Member=Component R111 Resistor
+Added Member To Class: ClassName=Sheet2_Inverter_GateDriver Member=Component Rsh1 Resistor

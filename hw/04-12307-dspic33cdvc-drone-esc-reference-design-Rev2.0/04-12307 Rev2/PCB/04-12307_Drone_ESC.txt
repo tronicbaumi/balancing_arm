@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : C:\Users\A19614\OneDrive - Microchip Technology Inc\PROJECTS\WIP_Projects\dsPICHW\dsPIC33CDVC-Drone-ESC-Reference-Design\Rev2.0\04-12307 Rev2\PCB\04-12307_Drone_ESC.PcbDoc
+Date         : 1/30/2026
+Time         : 2:22:24 PM
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, 305
+    Connections routed, 305
+    Connections remaining, 0
+count : 4
