@@ -1,0 +1,257 @@
+meta :
+  timeStamp : 2026-06-11T10:17:06.266Z
+motor:
+  Tfr: 0.0048125
+  B: 1.2211E-5
+  Lq: 2.9654484963198385E-6
+  poleCount: 6
+  rated_current: 11.0
+  J: 6.0E-6
+  velocity:
+    nominal: 2094.3951023931954
+    maximum: 2303.834612632515
+    units: "rad/s"
+  L: 2.51E-6
+  R: 0.0809
+  current:
+    maximum:
+      continuous: 11.0
+      peak: 16.0
+    units: "A"
+  Ld: 2.0545515036801617E-6
+  Ke: 0.005629410904907141
+  id: "Ducted Fan"
+controller: {}
+metadata:
+  data_model:
+    schema_version: 5
+  motorBench:
+    commit_id: "c114bdc6e8ebb44adc1b5cd1e6b92ea0b107647e"
+    version: "2.55.0"
+  MCC:
+    peripherals:
+      instances:
+      - name: "ADC1"
+        type: "adc"
+      - name: "PWM"
+        type: "pwm_hs"
+      - name: "SCCP1"
+        type: "timer"
+      - name: "TMR1"
+        type: "timer"
+      - name: "UART2"
+        type: "uart"
+      - name: "OPA1"
+        type: "opa"
+      - name: "OPA2"
+        type: "opa"
+      - name: "OPA3"
+        type: "opa"
+      - name: "CMP1"
+        type: "cmp"
+      - name: "UART3"
+        type: "uart"
+    version: "5.8.4"
+    peripheral_library:
+      name: "melody"
+      version: "NA"
+    architecture: "melody"
+operating_range:
+  velocity:
+    units_qualifier: "mechanical"
+    units: "rad/s"
+    minimum: 174.53300000000002
+scdata:
+  setup:
+    communications:
+      baudrate: 625000
+    analysis:
+      spindown_time:
+        units: "s"
+        value: 1.0
+      max_motor_speed:
+        units: "rad/s mechanical"
+        value: 2094.4
+    calibration:
+      vdc:
+        units: "V"
+        value: 12.0
+      resistor:
+        units: "ohms"
+        value: 12.0
+autotune_result:
+  current:
+    Kp: 0.060947348008874545
+    phase_margin: 80.0
+    wc: 12108.11482998448
+    Ki: 737.9574882744789
+    pi_phase_lag: 45.0
+  velocity:
+    Kp: 0.07615936291855246
+    phase_margin: 65.0
+    wc: 108.82800898537516
+    Ki: 1.4614459474312234
+    pi_phase_lag: 10.0
+drive:
+  metadata:
+    name: "dsPIC33CDVC256MP506 Drone Ref Design"
+    id: "cdvc-drone02"
+  iout:
+    time_constant: 1.8814E-7
+    fullscale: 22.0
+    maximum:
+      continuous: 10.0
+      peak: 10.0
+    units: "A"
+  vdc:
+    time_constant: 6.11E-6
+    nominal: 12.0
+    fullscale: 36.3
+    maximum: 16.0
+    units: "V"
+    minimum: 10.0
+  estimator:
+    omega1: 732.0
+    tau: 0.00219
+    type: "pll"
+  configuration:
+    identification:
+      id: "cdvc-drone02"
+      displayName: "dsPIC33CDVC256MP506 Drone Ref Design"
+      description: "Pallas Reference Design"
+    characteristics:
+      device: "dsPIC33CDVC256MP506"
+      gateDriver:
+        device: "MCP8021"
+        configuration:
+          sleepMode: "standby"
+          shortCircuitDetect: false
+          underVoltageLockout: false
+        pins:
+          RX: "RC12"
+          TX: "RC12"
+          fault: "RB12"
+          outputEnable: "RB13"
+      voltage:
+        phase:
+          timeConstant: 6.11E-6
+          fullscale: 36.3
+        dcLink:
+          timeConstant: 6.11E-6
+          fullscale: 36.3
+          minimum: 10.0
+          maximum: 16.0
+          default: 12.0
+      current:
+        phase:
+          fullscale: 22.0
+          maximum:
+            continuous: 10
+          timeConstant: 1.8814E-7
+        dcLink:
+          fullscale: 22.0
+          timeConstant: 1.8814E-7
+      pwm:
+        frequency:
+          minimum: 1000
+          maximum: 100000
+          default: 20000
+        deadTime:
+          minimum: 6.7E-7
+          maximum: 6.0E-6
+          default: 1.0E-6
+        dutyCycle:
+          minimum: 0.009
+          maximum: 0.975
+    peripherals:
+      oscillator:
+        clockSource: "internal FRC"
+        inputClockFrequency: 8000000
+      adc:
+        current:
+          a:
+            channel: "AN1"
+            inverted: true
+            signed: true
+          b:
+            channel: "AN4"
+            inverted: true
+            signed: true
+          dcLink:
+            channel: "AN0"
+            inverted: false
+            signed: true
+        voltage:
+          dcLink:
+            channel: "AN12"
+            signed: true
+          a:
+            channel: "AN11"
+            signed: false
+          b:
+            channel: "AN10"
+            signed: false
+          c:
+            channel: "AN2"
+            signed: false
+        other:
+          potentiometer:
+            channel: "AN15"
+            signed: true
+        samplingTime:
+          default: 3.0E-7
+          minimum: 3.0E-7
+          maximum: 3.0E-7
+      pwm:
+        polarity:
+          upper: "active-high"
+          lower: "active-high"
+        generators:
+          a: 1
+          b: 3
+          c: 4
+        fault:
+          polarity: "active-high"
+          source: "CMP1"
+      opamp:
+        enabled:
+        - 1
+        - 2
+        - 3
+      comparator:
+        source: "CMP1A"
+        inverted: false
+        threshold: 0.95
+      gpio:
+        MCAF_LED2:
+          pin: "RB1"
+          direction: "output"
+          polarity: "active-high"
+        MCAF_BUTTON1:
+          pin: "RC9"
+          direction: "input"
+          polarity: "active-high"
+        MCAF_BUTTON2:
+          pin: "RD12"
+          direction: "input"
+          polarity: "active-high"
+      uart:
+        pins:
+          RX: "RC7"
+          TX: "RD10"
+      debugger:
+        channel: 3
+  pwm:
+    period: 5.0E-5
+    duty_cycle:
+      maximum: 0.975
+      minimum: 0.009
+    deadtime: 1.0E-6
+  idc:
+    units: "A"
+  sampling_time:
+    current: 5.0E-5
+    velocity: 0.001
+  processor:
+    clock_frequency: 1.0E8
+    device: "dsPIC33CDVC256MP506"
