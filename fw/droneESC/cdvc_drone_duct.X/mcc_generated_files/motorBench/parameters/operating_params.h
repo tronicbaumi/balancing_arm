@@ -87,8 +87,8 @@ extern "C" {
  * ilimit                                 
  *   ipeak:                       10.000  A
  * run                                    
- *   slewrate_accel:               6.636 krad/s^2
- *                                63.366 kRPM/s
+ *   slewrate_accel:             132.714  rad/s^2
+ *                                 1.267 kRPM/s
  *   slewrate_decel:               1.314 krad/s^2
  *                                12.544 kRPM/s
  *   t_coastdown:                983.036 ms
@@ -111,10 +111,10 @@ extern "C" {
 
 #define VELOCITY_SLEWRATE_LIMIT1 32000
 /* slew rate limit for velocity commands during acceleration */
-#define VELOCITY_SLEWRATE_LIMIT_ACCEL               69      // Q15(  0.00211) =   +6.61529 rad/s       =   +6.63572 rad/s       - 0.3079%
-#define VELOCITY_SLEWRATE_LIMIT_ACCEL_NORM    0.0021057129  // normalized
+#define VELOCITY_SLEWRATE_LIMIT_ACCEL                1      // Q15(  0.00003) =  +95.87380 mrad/s      = +132.71444 mrad/s      -27.7593%
+#define VELOCITY_SLEWRATE_LIMIT_ACCEL_NORM    3.051758e-05  // normalized
 #define VELOCITY_SLEWRATE_LIMIT_ACCEL_SCALE   3.141593e+03  // rad/s
-#define VELOCITY_SLEWRATE_LIMIT_ACCEL_ENG     6.6152921478  // rad/s
+#define VELOCITY_SLEWRATE_LIMIT_ACCEL_ENG     0.0958737992  // rad/s
 /* slew rate limit for velocity commands during deceleration */
 #define VELOCITY_SLEWRATE_LIMIT_DECEL               14      // Q15(  0.00043) =   +1.34223 rad/s       =   +1.31358 rad/s       + 2.1816%
 #define VELOCITY_SLEWRATE_LIMIT_DECEL_NORM    0.0004272461  // normalized

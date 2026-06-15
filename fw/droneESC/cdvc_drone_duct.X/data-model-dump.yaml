@@ -274,7 +274,7 @@ config:
       operation-fullscale_base_ratio: 1.5
       operation-outer_loop_type: velocity
       operation-saliency-threshold: 1.25
-      operation-slewrate-accel: 0.5
+      operation-slewrate-accel: 0.01
       operation-slewrate-decel: 1.0
       operation-dyn_current_type: none
       operation-stopping-type: minimal_impact

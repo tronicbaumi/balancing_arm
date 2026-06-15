@@ -688,7 +688,7 @@
         {
             "define_name": "VELOCITY_SLEWRATE_LIMIT_ACCEL",
             "description": "slew rate limit for velocity commands during acceleration",
-            "intended_value": 6.63572196447,
+            "intended_value": 0.132714439289,
             "key": "operation.run.velocitySlewrateLimitAccel",
             "q": 15,
             "scale": 3141.59265359,
