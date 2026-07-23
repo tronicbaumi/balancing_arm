@@ -1,17 +1,17 @@
 /**
  * UART3 Generated Driver Source File
  * 
- * @file        uart3.c
- *  
- * @ingroup     uartdriver
- *  
- * @brief       This is the generated driver source file for the UART3 driver
+ * @file      uart3.c
  *            
- * @skipline @version     Firmware Driver Version 1.7.0
+ * @ingroup   uartdriver
+ *            
+ * @brief     This is the generated driver source file for the UART3 driver.
+ *            
+ * @skipline @version   Firmware Driver Version 1.7.0
  *
- * @skipline @version     PLIB Version 1.5.4
- *
- * @skipline    Device : dsPIC33CDVC256MP506
+ * @skipline @version   PLIB Version 1.5.4
+ *            
+ * @skipline  Device : dsPIC33CDVC256MP506
 */
 
 /*
@@ -36,10 +36,10 @@
 */
 
 // Section: Included Files
-#include <stdbool.h>
 #include <stdint.h>
 #include <stddef.h>
 #include <xc.h>
+#include <stddef.h>
 #include "../uart3.h"
 
 // Section: Macro Definitions
@@ -56,7 +56,7 @@
 
 // Section: Driver Interface
 
-const struct UART_INTERFACE MCP802x_UART = {
+const struct UART_INTERFACE UART3_Drv = {
     .Initialize = &UART3_Initialize,
     .Deinitialize = &UART3_Deinitialize,
     .Read = &UART3_Read,
@@ -76,17 +76,15 @@ const struct UART_INTERFACE MCP802x_UART = {
     .BaudRateSet = &UART3_BaudRateSet,
     .BaudRateGet = &UART3_BaudRateGet,
     .ErrorGet = &UART3_ErrorGet,
-    .RxCompleteCallbackRegister = &UART3_RxCompleteCallbackRegister,
-    .TxCompleteCallbackRegister = &UART3_TxCompleteCallbackRegister,
-    .TxCollisionCallbackRegister = &UART3_TxCollisionCallbackRegister,
-    .FramingErrorCallbackRegister = &UART3_FramingErrorCallbackRegister,
-    .OverrunErrorCallbackRegister = &UART3_OverrunErrorCallbackRegister,
-    .ParityErrorCallbackRegister = &UART3_ParityErrorCallbackRegister,
+    .RxCompleteCallbackRegister = NULL,
+    .TxCompleteCallbackRegister = NULL,
+    .TxCollisionCallbackRegister = NULL,
+    .FramingErrorCallbackRegister = NULL,
+    .OverrunErrorCallbackRegister = NULL,
+    .ParityErrorCallbackRegister = NULL,
 };
 
 // Section: Private Variable Definitions
-
-static volatile bool softwareBufferEmpty = true;
 static union
 {
     struct
@@ -101,101 +99,27 @@ static union
     size_t status;
 } uartError;
 
-// Section: Data Type Definitions
-
-/**
- @ingroup  uartdriver
- @static   UART Driver Queue Status
- @brief    Defines the object required for the status of the queue
-*/
-static uint8_t * volatile rxTail;
-static uint8_t * volatile rxHead;
-static uint8_t * volatile txTail;
-static uint8_t * volatile txHead;
-static bool volatile rxOverflowed;
-
-/**
- @ingroup  uartdriver
- @brief    Defines the length of the Transmit and Receive Buffers
-*/
-
-/* We add one extra byte than requested so that we don't have to have a separate
- * bit to determine the difference between buffer full and buffer empty, but
- * still be able to hold the amount of data requested by the user.  Empty is
- * when head == tail.  So full will result in head/tail being off by one due to
- * the extra byte.
- */
-#define UART3_CONFIG_TX_BYTEQ_LENGTH (8+1)
-#define UART3_CONFIG_RX_BYTEQ_LENGTH (8+1)
-
-/**
- @ingroup  uartdriver
- @static   UART Driver Queue
- @brief    Defines the Transmit and Receive Buffers
-*/
-static uint8_t txQueue[UART3_CONFIG_TX_BYTEQ_LENGTH];
-static uint8_t rxQueue[UART3_CONFIG_RX_BYTEQ_LENGTH];
-
-static void (*UART3_RxCompleteHandler)(void);
-static void (*UART3_TxCompleteHandler)(void);
-static void (*UART3_TxCollisionHandler)(void);
-static void (*UART3_FramingErrorHandler)(void);
-static void (*UART3_OverrunErrorHandler)(void);
-static void (*UART3_ParityErrorHandler)(void);
-
-// Section: Driver Interface
+// Section: UART3 APIs
 
 void UART3_Initialize(void)
 {
-    IEC3bits.U3TXIE = 0;
-    IEC3bits.U3RXIE = 0;
-    IEC11bits.U3EVTIE = 0;
-
+/*    
+     Set the UART3 module to the options selected in the user interface.
+     Make sure to set LAT bit corresponding to TxPin as high before UART initialization
+*/
     // URXEN ; RXBIMD ; UARTEN disabled; MOD Asynchronous 8-bit UART; UTXBRK ; BRKOVR ; UTXEN ; USIDL ; WAKE ; ABAUD ; BRGH ; 
     U3MODE = 0x0U;
     // STSEL 1 Stop bit sent, 1 checked at RX; BCLKMOD enabled; SLPEN ; FLO ; BCLKSEL FOSC/2; C0EN ; RUNOVF ; UTXINV ; URXINV ; HALFDPLX ; 
     U3MODEH = 0x800U;
     // OERIE ; RXBKIF ; RXBKIE ; ABDOVF ; OERR ; TXCIE ; TXCIF ; FERIE ; TXMTIE ; ABDOVE ; CERIE ; CERIF ; PERIE ; 
     U3STA = 0x80U;
-    // URXISEL ; UTXBE ; UTXISEL TX_BUF_EMPTY; URXBE ; STPMD ; TXWRE ; 
+    // URXISEL ; UTXBE ; UTXISEL ; URXBE ; STPMD ; TXWRE ; 
     U3STAH = 0x2EU;
-    // BaudRate 9599.69; Frequency 100000000 Hz; BRG 10417; 
-    U3BRG = 0x28B1U;
+    // BaudRate 115207.37; Frequency 100000000 Hz; BRG 868; 
+    U3BRG = 0x364U;
     // BRG 0; 
     U3BRGH = 0x0U;
     
-    txHead = txQueue;
-    txTail = txQueue;
-    rxHead = rxQueue;
-    rxTail = rxQueue;
-   
-    rxOverflowed = false;
-    
-    UART3_RxCompleteCallbackRegister(&UART3_RxCompleteCallback);
-    UART3_TxCompleteCallbackRegister(&UART3_TxCompleteCallback);
-    UART3_TxCollisionCallbackRegister(&UART3_TxCollisionCallback);
-    UART3_FramingErrorCallbackRegister(&UART3_FramingErrorCallback);
-    UART3_OverrunErrorCallbackRegister(&UART3_OverrunErrorCallback);
-    UART3_ParityErrorCallbackRegister(&UART3_ParityErrorCallback);
-
-    // UART Frame error interrupt
-    U3STAbits.FERIE = 1;
-    // UART Parity error interrupt
-    U3STAbits.PERIE = 1;
-    // UART Receive Buffer Overflow interrupt
-    U3STAbits.OERIE = 1;
-    // UART Transmit collision interrupt
-    U3STAbits.TXCIE = 1;
-    // UART Auto-Baud Overflow interrupt
-    U3STAbits.ABDOVE = 1;  
-    // UART Receive Interrupt
-    IEC3bits.U3RXIE = 1;
-    // UART Event interrupt
-    IEC11bits.U3EVTIE = 1;
-    // UART Error interrupt
-    IEC3bits.U3EIE    = 1;
-    
-    //Make sure to set LAT bit corresponding to TxPin as high before UART initialization
     U3MODEbits.UARTEN = 1;   // enabling UART ON bit
     U3MODEbits.UTXEN = 1;
     U3MODEbits.URXEN = 1;
@@ -203,22 +127,6 @@ void UART3_Initialize(void)
 
 void UART3_Deinitialize(void)
 {
-    // UART Transmit interrupt
-    IFS3bits.U3TXIF = 0;
-    IEC3bits.U3TXIE = 0;
-    
-    // UART Receive Interrupt
-    IFS3bits.U3RXIF = 0;
-    IEC3bits.U3RXIE = 0;
-    
-    // UART Event interrupt
-    IFS11bits.U3EVTIF = 0;
-    IEC11bits.U3EVTIE = 0;
-    
-    // UART Error interrupt
-    IFS3bits.U3EIF = 0;
-    IEC3bits.U3EIE    = 0;
-    
     U3MODE = 0x0U;
     U3MODEH = 0x0U;
     U3STA = 0x80U;
@@ -229,73 +137,42 @@ void UART3_Deinitialize(void)
 
 uint8_t UART3_Read(void)
 {
-    uint8_t data = 0;
+    while((U3STAHbits.URXBE == 1))
+    {
+        
+    }
 
-    if(rxHead != rxTail)
-	{
-		data = *rxHead;
-
-		rxHead++;
-
-		if (rxHead == &rxQueue[UART3_CONFIG_RX_BYTEQ_LENGTH])
-		{
-			rxHead = rxQueue;
-		}
-	}
-    return data;
+    if ((U3STAbits.OERR == 1))
+    {
+        U3STAbits.OERR = 0;
+    }
+    
+    return (uint8_t)U3RXREG;
 }
 
-void UART3_Write(uint8_t byte)
+void UART3_Write(uint8_t txData)
 {
-    while(UART3_IsTxReady() == 0)
+    while(U3STAHbits.UTXBF == 1)
     {
+        
     }
 
-    *txTail = byte;
-
-    txTail++;
-    
-    if (txTail == &txQueue[UART3_CONFIG_TX_BYTEQ_LENGTH])
-    {
-        txTail = txQueue;
-    }
-
-    IEC3bits.U3TXIE = 1;
-    softwareBufferEmpty = false;
+    U3TXREG = txData;    // Write the data byte to the USART.
 }
 
 bool UART3_IsRxReady(void)
-{    
-    return !(rxHead == rxTail);
+{
+    return (U3STAHbits.URXBE == 0);
 }
 
 bool UART3_IsTxReady(void)
 {
-    uint16_t size;
-    uint8_t *snapshot_txHead = (uint8_t*)txHead;
-    
-    if (txTail < snapshot_txHead)
-    {
-        size = (snapshot_txHead - txTail - 1);
-    }
-    else
-    {
-        size = ( UART3_CONFIG_TX_BYTEQ_LENGTH - (txTail - snapshot_txHead) - (uint16_t)1 );
-    }
-    
-    return (size != (uint16_t)0);
+    return ((!U3STAHbits.UTXBF) && U3MODEbits.UTXEN);
 }
 
 bool UART3_IsTxDone(void)
 {
-    bool status = false;
-    
-    if(txTail == txHead)
-    {
-        status = (bool)(U3STAbits.TRMT && U3STAHbits.UTXBE);
-    }
-    
-    return status;
+    return (bool)(U3STAbits.TRMT && U3STAHbits.UTXBE);
 }
 
 void UART3_TransmitEnable(void)
@@ -307,7 +184,6 @@ void UART3_TransmitDisable(void)
 {
     U3MODEbits.UTXEN = 0;
 }
-
 
 void UART3_AutoBaudSet(bool enable)
 {
@@ -326,6 +202,35 @@ bool UART3_AutoBaudEventEnableGet(void)
     return U3INTbits.ABDIE; 
 }
 
+size_t UART3_ErrorGet(void)
+{
+    uartError.status = 0;
+    if(U3STAbits.FERR == 1U)
+    {
+        uartError.status = uartError.status | (uint16_t)UART_ERROR_FRAMING_MASK;
+    }
+    if(U3STAbits.PERR== 1U)
+    {
+        uartError.status = uartError.status| (uint16_t)UART_ERROR_PARITY_MASK;
+    }
+    if(U3STAbits.OERR== 1U)
+    {
+        uartError.status = uartError.status| (uint16_t)UART_ERROR_RX_OVERRUN_MASK;
+        U3STAbits.OERR = 0;
+    }
+    if(U3STAbits.TXCIF== 1U)
+    {
+        uartError.status = uartError.status| (uint16_t)UART_ERROR_TX_COLLISION_MASK;
+        U3STAbits.TXCIF = 0;
+    }
+    if(U3STAbits.ABDOVF== 1U)
+    {
+        uartError.status = uartError.status| (uint16_t)UART_ERROR_AUTOBAUD_OVERFLOW_MASK;
+        U3STAbits.ABDOVF = 0;
+    }
+    
+    return uartError.status;
+}
 
 void UART3_BRGCountSet(uint32_t brgValue)
 {
@@ -375,7 +280,7 @@ uint32_t UART3_BaudRateGet(void)
     uint32_t baudRate;
     
     brgValue = UART3_BRGCountGet();
-    if((U3MODEHbits.BCLKMOD == 1U) && (brgValue != 0U))
+    if((U3MODEHbits.BCLKMOD == 1) && (brgValue != 0U))
     {
         baudRate = UART3_BRG_TO_BAUD_WITH_FRACTIONAL(brgValue);
     }
@@ -388,263 +293,4 @@ uint32_t UART3_BaudRateGet(void)
         baudRate = UART3_BRG_TO_BAUD_WITH_BRGH_0(brgValue);
     }
     return baudRate;
-}
-
-void UART3_TxCollisionInterruptSet(const bool enable)
-{
-    if(enable == true)
-    {
-        U3STAbits.TXCIE = 1;
-    }
-    else 
-    {
-        U3STAbits.TXCIE = 0;
-    }
-}
-
-size_t UART3_ErrorGet(void)
-{
-    size_t fetchUartError = uartError.status;
-    uartError.status = 0;
-    return fetchUartError;
-}
-
-void UART3_RxCompleteCallbackRegister(void (*handler)(void))
-{
-    if(NULL != handler)
-    {
-        UART3_RxCompleteHandler = handler;
-    }
-}
-
-void __attribute__ ((weak)) UART3_RxCompleteCallback(void)
-{ 
-
-} 
-
-void UART3_TxCompleteCallbackRegister(void (*handler)(void))
-{
-    if(NULL != handler)
-    {
-        UART3_TxCompleteHandler = handler;
-    }
-}
-
-void __attribute__ ((weak)) UART3_TxCompleteCallback(void)
-{ 
-
-} 
-
-void UART3_TxCollisionCallbackRegister(void (*handler)(void))
-{
-    if(NULL != handler)
-    {
-        UART3_TxCollisionHandler = handler;
-    }
-}
-
-void __attribute__ ((weak)) UART3_TxCollisionCallback(void)
-{ 
-
-} 
-
-void UART3_FramingErrorCallbackRegister(void (*handler)(void))
-{
-    if(NULL != handler)
-    {
-        UART3_FramingErrorHandler = handler;
-    }
-}
-
-void __attribute__ ((weak)) UART3_FramingErrorCallback(void)
-{ 
-
-} 
-
-void UART3_OverrunErrorCallbackRegister(void (*handler)(void))
-{
-    if(NULL != handler)
-    {
-        UART3_OverrunErrorHandler = handler;
-    }
-}
-
-void __attribute__ ((weak)) UART3_OverrunErrorCallback(void)
-{ 
-
-} 
-
-void UART3_ParityErrorCallbackRegister(void (*handler)(void))
-{
-    if(NULL != handler)
-    {
-        UART3_ParityErrorHandler = handler;
-    }
-}
-
-void __attribute__ ((weak)) UART3_ParityErrorCallback(void)
-{ 
-
-} 
-
-        /* cppcheck-suppress misra-c2012-8.4
-        *
-        * (Rule 8.4) REQUIRED: A compatible declaration shall be visible when an object or 
-        * function with external linkage is defined
-        *
-        * Reasoning: Interrupt declaration are provided by compiler and are available
-        * outside the driver folder
-        */
-void __attribute__ ( ( interrupt, no_auto_psv ) ) _U3TXInterrupt(void)
-{
-
-    if(txHead == txTail)
-    {
-        if(NULL != UART3_TxCompleteHandler)
-            {
-                (*UART3_TxCompleteHandler)();
-            }
-        IEC3bits.U3TXIE = 0;
-        softwareBufferEmpty = true;
-    }
-    else
-    {
-
-        while(!(U3STAHbits.UTXBF == 1))
-        {
-            U3TXREG = *txHead;
-            txHead++;
-
-            if(txHead == &txQueue[UART3_CONFIG_TX_BYTEQ_LENGTH])
-            {
-                txHead = txQueue;
-            }
-
-            // Are we empty?
-            if(txHead == txTail)
-            {
-                break;
-            }
-        }
-    }
-}
-
-        /* cppcheck-suppress misra-c2012-8.4
-        *
-        * (Rule 8.4) REQUIRED: A compatible declaration shall be visible when an object or 
-        * function with external linkage is defined
-        *
-        * Reasoning: Interrupt declaration are provided by compiler and are available
-        * outside the driver folder
-        */
-void __attribute__ ( ( interrupt, no_auto_psv ) ) _U3RXInterrupt(void)
-{
-    size_t rxQueueSize ;
-    uint8_t *rxTailPtr = NULL;
-    
-    IFS3bits.U3RXIF = 0;
-    
-    while(!(U3STAHbits.URXBE == 1))
-    {
-        *rxTail = U3RXREG;
-
-        rxQueueSize = UART3_CONFIG_RX_BYTEQ_LENGTH - 1;
-        rxTailPtr = rxTail;
-        rxTailPtr++;
-        // Will the increment not result in a wrap and not result in a pure collision?
-        // This is most often condition so check first
-        if ((rxTail != &rxQueue[rxQueueSize]) && (rxTailPtr != rxHead))
-        {
-            rxTail++;
-        } 
-        else if ( (rxTail == &rxQueue[rxQueueSize]) &&
-                  (rxHead !=  rxQueue) )
-        {
-            // Pure wrap no collision
-            rxTail = rxQueue;
-        } 
-        else // must be collision
-        {
-            rxOverflowed = true;
-        }
-    }
-	
-    if(NULL != UART3_RxCompleteHandler)
-    {
-        (*UART3_RxCompleteHandler)();
-    }
-}
-
-        /* cppcheck-suppress misra-c2012-8.4
-        *
-        * (Rule 8.4) REQUIRED: A compatible declaration shall be visible when an object or 
-        * function with external linkage is defined
-        *
-        * Reasoning: Interrupt declaration are provided by compiler and are available
-        * outside the driver folder
-        */
-void __attribute__ ( ( interrupt, no_auto_psv ) ) _U3EInterrupt(void)
-{
-    if (U3STAbits.ABDOVF == 1)
-    {
-        uartError.status = (uint16_t)(uartError.status | (uint16_t)UART_ERROR_AUTOBAUD_OVERFLOW_MASK);
-        U3STAbits.ABDOVF = 0;
-    }
-    
-    if (U3STAbits.TXCIF == 1)
-    {
-        uartError.status = (uint16_t)(uartError.status | (uint16_t)UART_ERROR_TX_COLLISION_MASK);
-        if(NULL != UART3_TxCollisionHandler)
-        {
-            (*UART3_TxCollisionHandler)();
-        }
-        
-        U3STAbits.TXCIF = 0;
-    }
-    
-    if (U3STAbits.OERR == 1)
-    {
-        uartError.status = (uint16_t)(uartError.status | (uint16_t)UART_ERROR_RX_OVERRUN_MASK);
-        if(NULL != UART3_OverrunErrorHandler)
-        {
-            (*UART3_OverrunErrorHandler)();
-        }
-        
-        U3STAbits.OERR = 0;
-    }
-    
-    if (U3STAbits.PERR == 1)
-    {
-        uartError.status = (uint16_t)(uartError.status | (uint16_t)UART_ERROR_PARITY_MASK);
-        if(NULL != UART3_ParityErrorHandler)
-        {
-            (*UART3_ParityErrorHandler)();
-        }
-    }
-    
-    if (U3STAbits.FERR == 1)
-    {
-        uartError.status = (uint16_t)(uartError.status | (uint16_t)UART_ERROR_FRAMING_MASK);
-        if(NULL != UART3_FramingErrorHandler)
-        {
-            (*UART3_FramingErrorHandler)();
-        }
-    }
-        
-    IFS3bits.U3EIF = 0;
-}
-
-/* ISR for UART Event Interrupt */
-        /* cppcheck-suppress misra-c2012-8.4
-        *
-        * (Rule 8.4) REQUIRED: A compatible declaration shall be visible when an object or 
-        * function with external linkage is defined
-        *
-        * Reasoning: Interrupt declaration are provided by compiler and are available
-        * outside the driver folder
-        */
-void __attribute__ ( ( interrupt, no_auto_psv ) ) _U3EVTInterrupt(void)
-{
-    U3INTbits.ABDIF = false;
-    IFS11bits.U3EVTIF = false;
 }

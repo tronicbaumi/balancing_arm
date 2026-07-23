@@ -63,19 +63,19 @@ extern "C" {
 #define KFILTER_IQ_SCALE                 2.000000e+04  // rad/s
 #define KFILTER_IQ_ENG                 999.7558593750  // rad/s
 /* Minimum velocity command */
-#define MCAPI_MINIMUM_VELOCITY               2621      // Q15(  0.07999) = +251.28523 rad/s       = +251.32741 rad/s       - 0.0168%
+#define MCAPI_MINIMUM_VELOCITY               2621      // Q15(  0.07999) = +276.41375 rad/s       = +276.46015 rad/s       - 0.0168%
 #define MCAPI_MINIMUM_VELOCITY_NORM      0.0799865723  // normalized
-#define MCAPI_MINIMUM_VELOCITY_SCALE     3.141593e+03  // rad/s
-#define MCAPI_MINIMUM_VELOCITY_ENG     251.2852278155  // rad/s
+#define MCAPI_MINIMUM_VELOCITY_SCALE     3.455752e+03  // rad/s
+#define MCAPI_MINIMUM_VELOCITY_ENG     276.4137505971  // rad/s
 /* Maximum velocity command */
-#define MCAPI_MAXIMUM_VELOCITY              24030      // Q15(  0.73334) =   +2.30385 krad/s      =   +2.30383 krad/s      + 0.0006%
-#define MCAPI_MAXIMUM_VELOCITY_NORM      0.7333374023  // normalized
-#define MCAPI_MAXIMUM_VELOCITY_SCALE     3.141593e+03  // rad/s
-#define MCAPI_MAXIMUM_VELOCITY_ENG       2.303847e+03  // rad/s
+#define MCAPI_MAXIMUM_VELOCITY              23831      // Q15(  0.72726) =   +2.51325 krad/s      =   +2.51327 krad/s      - 0.0011%
+#define MCAPI_MAXIMUM_VELOCITY_NORM      0.7272644043  // normalized
+#define MCAPI_MAXIMUM_VELOCITY_SCALE     3.455752e+03  // rad/s
+#define MCAPI_MAXIMUM_VELOCITY_ENG       2.513245e+03  // rad/s
 
 #define MCAPI_FULLSCALE_CURRENT                     44 //            A
 #define MCAPI_FULLSCALE_VOLTAGE                   36.3 //            V
-#define MCAPI_FULLSCALE_VELOCITY                 30000 //            RPM
+#define MCAPI_FULLSCALE_VELOCITY                 33000 //            RPM
 #define MCAPI_FULLSCALE_TORQUE            0.1857705599 //            Nm
 
 #ifdef  __cplusplus

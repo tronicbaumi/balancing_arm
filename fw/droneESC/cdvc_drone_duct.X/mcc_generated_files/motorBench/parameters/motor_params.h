@@ -113,25 +113,25 @@ extern "C" {
 #define MCAF_MOTOR_RELATIVE_SALIENCY_ENG     0.1814575195
 
 /* Back-EMF constant of the motor */
-#define MCAF_MOTOR_KE                        1996      // Q12(  0.48730) =   +5.63063 mV/(rad/s)  =   +5.62941 mV/(rad/s)  + 0.0217%
+#define MCAF_MOTOR_KE                        2195      // Q12(  0.53589) =   +5.62910 mV/(rad/s)  =   +5.62941 mV/(rad/s)  - 0.0056%
 #define MCAF_MOTOR_KE_Q                        12
-#define MCAF_MOTOR_KE_NORM               0.4873046875  // normalized
-#define MCAF_MOTOR_KE_SCALE              0.0115546489  // V/(rad/s)
-#define MCAF_MOTOR_KE_ENG                0.0056306346  // V/(rad/s)
+#define MCAF_MOTOR_KE_NORM               0.5358886719  // normalized
+#define MCAF_MOTOR_KE_SCALE              0.0105042262  // V/(rad/s)
+#define MCAF_MOTOR_KE_ENG                0.0056290959  // V/(rad/s)
 
 /* Inverse of BEMF constant of the motor */
-#define MCAF_MOTOR_KE_INVERSE               16814      // Q13(  2.05249) = +177.63328 (rad/s)/V   = +177.63848 (rad/s)/V   - 0.0029%
+#define MCAF_MOTOR_KE_INVERSE               15286      // Q13(  1.86597) = +177.63962 (rad/s)/V   = +177.63848 (rad/s)/V   + 0.0006%
 #define MCAF_MOTOR_KE_INVERSE_Q                13
-#define MCAF_MOTOR_KE_INVERSE_NORM       2.0524902344  // normalized
-#define MCAF_MOTOR_KE_INVERSE_SCALE     86.5452521650  // (rad/s)/V
-#define MCAF_MOTOR_KE_INVERSE_ENG      177.6332849002  // (rad/s)/V
+#define MCAF_MOTOR_KE_INVERSE_NORM       1.8659667969  // normalized
+#define MCAF_MOTOR_KE_INVERSE_SCALE     95.1997773815  // (rad/s)/V
+#define MCAF_MOTOR_KE_INVERSE_ENG      177.6396236638  // (rad/s)/V
 
 /* Magnetic Flux of the motor */
-#define MCAF_MOTOR_PSI_BASE_OMEGA_E             7982      // Q14(  0.48718) =   +1.87641 mV*s        =   +1.87647 mV*s        - 0.0033%
+#define MCAF_MOTOR_PSI_BASE_OMEGA_E             8780      // Q14(  0.53589) =   +1.87637 mV*s        =   +1.87647 mV*s        - 0.0056%
 #define MCAF_MOTOR_PSI_BASE_OMEGA_E_Q             14
-#define MCAF_MOTOR_PSI_BASE_OMEGA_E_NORM    0.4871826172  // normalized
-#define MCAF_MOTOR_PSI_BASE_OMEGA_E_SCALE   0.0038515496  // V*s
-#define MCAF_MOTOR_PSI_BASE_OMEGA_E_ENG     0.0018764080  // V*s
+#define MCAF_MOTOR_PSI_BASE_OMEGA_E_NORM    0.5358886719  // normalized
+#define MCAF_MOTOR_PSI_BASE_OMEGA_E_SCALE   0.0035014087  // V*s
+#define MCAF_MOTOR_PSI_BASE_OMEGA_E_ENG     0.0018763653  // V*s
 
 /* Magnetic Flux of the motor */
 #define MCAF_MOTOR_PSI_BASE_DT              16939      // Q14(  1.03387) =   +1.87648 mV*s        =   +1.87647 mV*s        + 0.0006%
@@ -141,46 +141,46 @@ extern "C" {
 #define MCAF_MOTOR_PSI_BASE_DT_ENG       0.0018764822  // V*s
 
 /* Maximum of Ld, Lq */
-#define MCAF_MOTOR_LMAX_BASE_OMEGA_E             1110      // Q15(  0.03387) =   +2.96521 uH          =   +2.96545 uH          - 0.0079%
+#define MCAF_MOTOR_LMAX_BASE_OMEGA_E             1221      // Q15(  0.03726) =   +2.96521 uH          =   +2.96545 uH          - 0.0079%
 #define MCAF_MOTOR_LMAX_BASE_OMEGA_E_Q             15
-#define MCAF_MOTOR_LMAX_BASE_OMEGA_E_NORM    0.0338745117  // normalized
-#define MCAF_MOTOR_LMAX_BASE_OMEGA_E_SCALE   8.753522e-05  // H
+#define MCAF_MOTOR_LMAX_BASE_OMEGA_E_NORM    0.0372619629  // normalized
+#define MCAF_MOTOR_LMAX_BASE_OMEGA_E_SCALE   7.957747e-05  // H
 #define MCAF_MOTOR_LMAX_BASE_OMEGA_E_ENG     2.965213e-06  // H
 
 /* Stator inductance (line-to-neutral) */
-#define MCAF_MOTOR_LS_BASE_OMEGA_E              940      // Q15(  0.02869) =   +2.51108 uH          =   +2.51000 uH          + 0.0431%
+#define MCAF_MOTOR_LS_BASE_OMEGA_E             1034      // Q15(  0.03156) =   +2.51108 uH          =   +2.51000 uH          + 0.0431%
 #define MCAF_MOTOR_LS_BASE_OMEGA_E_Q             15
-#define MCAF_MOTOR_LS_BASE_OMEGA_E_NORM    0.0286865234  // normalized
-#define MCAF_MOTOR_LS_BASE_OMEGA_E_SCALE   8.753522e-05  // H
+#define MCAF_MOTOR_LS_BASE_OMEGA_E_NORM    0.0315551758  // normalized
+#define MCAF_MOTOR_LS_BASE_OMEGA_E_SCALE   7.957747e-05  // H
 #define MCAF_MOTOR_LS_BASE_OMEGA_E_ENG     2.511081e-06  // H
 
 /* Stator d-axis inductance (line-to-neutral) */
-#define MCAF_MOTOR_LD_BASE_OMEGA_E              769      // Q15(  0.02347) =   +2.05428 uH          =   +2.05455 uH          - 0.0133%
+#define MCAF_MOTOR_LD_BASE_OMEGA_E              846      // Q15(  0.02582) =   +2.05452 uH          =   +2.05455 uH          - 0.0015%
 #define MCAF_MOTOR_LD_BASE_OMEGA_E_Q             15
-#define MCAF_MOTOR_LD_BASE_OMEGA_E_NORM    0.0234680176  // normalized
-#define MCAF_MOTOR_LD_BASE_OMEGA_E_SCALE   8.753522e-05  // H
-#define MCAF_MOTOR_LD_BASE_OMEGA_E_ENG     2.054278e-06  // H
+#define MCAF_MOTOR_LD_BASE_OMEGA_E_NORM    0.0258178711  // normalized
+#define MCAF_MOTOR_LD_BASE_OMEGA_E_SCALE   7.957747e-05  // H
+#define MCAF_MOTOR_LD_BASE_OMEGA_E_ENG     2.054521e-06  // H
 
 /* Stator q-axis inductance (line-to-neutral) */
-#define MCAF_MOTOR_LQ_BASE_OMEGA_E             1110      // Q15(  0.03387) =   +2.96521 uH          =   +2.96545 uH          - 0.0079%
+#define MCAF_MOTOR_LQ_BASE_OMEGA_E             1221      // Q15(  0.03726) =   +2.96521 uH          =   +2.96545 uH          - 0.0079%
 #define MCAF_MOTOR_LQ_BASE_OMEGA_E_Q             15
-#define MCAF_MOTOR_LQ_BASE_OMEGA_E_NORM    0.0338745117  // normalized
-#define MCAF_MOTOR_LQ_BASE_OMEGA_E_SCALE   8.753522e-05  // H
+#define MCAF_MOTOR_LQ_BASE_OMEGA_E_NORM    0.0372619629  // normalized
+#define MCAF_MOTOR_LQ_BASE_OMEGA_E_SCALE   7.957747e-05  // H
 #define MCAF_MOTOR_LQ_BASE_OMEGA_E_ENG     2.965213e-06  // H
 
 /* Common-mode stator inductance (line-to-neutral) */
-#define MCAF_MOTOR_L0_BASE_OMEGA_E              940      // Q15(  0.02869) =   +2.51108 uH          =   +2.51000 uH          + 0.0431%
+#define MCAF_MOTOR_L0_BASE_OMEGA_E             1034      // Q15(  0.03156) =   +2.51108 uH          =   +2.51000 uH          + 0.0431%
 #define MCAF_MOTOR_L0_BASE_OMEGA_E_Q             15
-#define MCAF_MOTOR_L0_BASE_OMEGA_E_NORM    0.0286865234  // normalized
-#define MCAF_MOTOR_L0_BASE_OMEGA_E_SCALE   8.753522e-05  // H
+#define MCAF_MOTOR_L0_BASE_OMEGA_E_NORM    0.0315551758  // normalized
+#define MCAF_MOTOR_L0_BASE_OMEGA_E_SCALE   7.957747e-05  // H
 #define MCAF_MOTOR_L0_BASE_OMEGA_E_ENG     2.511081e-06  // H
 
 /* Differential-mode stator inductance (line-to-neutral) */
-#define MCAF_MOTOR_L1_BASE_OMEGA_E             -170      // Q15( -0.00519) = -454.13169 nH          = -455.44850 nH          - 0.2891%
+#define MCAF_MOTOR_L1_BASE_OMEGA_E             -188      // Q15( -0.00574) = -456.56020 nH          = -455.44850 nH          + 0.2441%
 #define MCAF_MOTOR_L1_BASE_OMEGA_E_Q             15
-#define MCAF_MOTOR_L1_BASE_OMEGA_E_NORM   -0.0051879883  // normalized
-#define MCAF_MOTOR_L1_BASE_OMEGA_E_SCALE   8.753522e-05  // H
-#define MCAF_MOTOR_L1_BASE_OMEGA_E_ENG    -4.541317e-07  // H
+#define MCAF_MOTOR_L1_BASE_OMEGA_E_NORM   -0.0057373047  // normalized
+#define MCAF_MOTOR_L1_BASE_OMEGA_E_SCALE   7.957747e-05  // H
+#define MCAF_MOTOR_L1_BASE_OMEGA_E_ENG    -4.565602e-07  // H
 
 
 /* 
@@ -202,17 +202,17 @@ extern "C" {
  * B:                             12.211 uNm/(rad/s)
  * Tf:                             4.812 mNm
  * J:                              6.000 uNm/(rad/s^2)
- * Maximum velocity:               2.304 krad/s
+ * Maximum velocity:               2.513 krad/s
+ *                                24.000 kRPM
+ * Nominal (base) velocity:        2.304 krad/s
  *                                22.000 kRPM
- * Nominal (base) velocity:        2.094 krad/s
- *                                20.000 kRPM
- * Nominal electrical frequency:   6.283 krad/s
- *                                60.000 kRPM
+ * Nominal electrical frequency:   6.912 krad/s
+ *                                66.000 kRPM
  * Rated current:                 11.000  A
- * V1:                            11.790  V line-neutral
- * V1ll:                          20.421  V line-line
+ * V1:                            12.969  V line-neutral
+ * V1ll:                          22.463  V line-line
  * T1:                            92.885 mNm
- * P1:                           194.538  W
+ * P1:                           213.992  W
  *
  * Motor constant:                24.240 mNm/sqrt(W)
  * Electrical time constant:      31.026 us
@@ -221,13 +221,13 @@ extern "C" {
  * Mechanical time constant including effect of stator resistance: 10.003 ms
  * Rotor flux:                     1.876 mVs
  * Saliency ratio:                 1.443  
- * tau_e_bar:                    0.194942  
- * tau_m_bar:                    21.386574  
+ * tau_e_bar:                    0.214436  
+ * tau_m_bar:                    23.525232  
  * alpha_J:                      329.122379  
  * alpha_B:                      0.020782  
  * alpha_psi:                    0.014714  
  * alpha_Tf:                     0.051811  
- * alpha_R:                      0.075478  
+ * alpha_R:                      0.068616  
  */
 
 #define MOTOR_PARAM_R                  8.090000000E-02   // stator resistance (ohms line-neutral)

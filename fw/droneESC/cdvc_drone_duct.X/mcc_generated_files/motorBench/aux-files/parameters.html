@@ -319,7 +319,7 @@ This list is still under construction.
 <td><code>foc.kwi</code></td>
 <td class="col_macro"><code>KWI</code></td>
 <td>\(K_{\omega i}\)</td>
-<td>1.4614459 </td>
+<td>1.5261324 </td>
 <td>A/rad</td>
 <td>Velocity loop integral gain</td>
 </tr>
@@ -327,7 +327,7 @@ This list is still under construction.
 <td><code>foc.kwp</code></td>
 <td class="col_macro"><code>KWP</code></td>
 <td>\(K_{\omega p}\)</td>
-<td>0.0761594 </td>
+<td>0.0779894 </td>
 <td>A/(rad/s)</td>
 <td>Velocity loop proportional gain</td>
 </tr>
@@ -464,7 +464,7 @@ This list is still under construction.
 <td><code>mcapi.fullscale.velocity</code></td>
 <td class="col_macro"><code>MCAPI_FULLSCALE_VELOCITY</code></td>
 <td></td>
-<td>3.000e+04 </td>
+<td>3.300e+04 </td>
 <td></td>
 <td>RPM</td>
 </tr>
@@ -496,7 +496,7 @@ This list is still under construction.
 <td><code>mcapi.mcapiMaximumVelocity</code></td>
 <td class="col_macro"><code>MCAPI_MAXIMUM_VELOCITY</code></td>
 <td></td>
-<td>2.304e+03 </td>
+<td>2.513e+03 </td>
 <td>rad/s</td>
 <td>Maximum velocity command</td>
 </tr>
@@ -504,7 +504,7 @@ This list is still under construction.
 <td><code>mcapi.mcapiMinimumVelocity</code></td>
 <td class="col_macro"><code>MCAPI_MINIMUM_VELOCITY</code></td>
 <td></td>
-<td>2.513e+02 </td>
+<td>2.765e+02 </td>
 <td>rad/s</td>
 <td>Minimum velocity command</td>
 </tr>
@@ -689,7 +689,7 @@ This list is still under construction.
 <td><code>operation.mcafVelocityCommandMax</code></td>
 <td class="col_macro"><code>MCAF_VELOCITY_COMMAND_MAX</code></td>
 <td></td>
-<td>2.304e+03 </td>
+<td>2.513e+03 </td>
 <td>rad/s</td>
 <td>Maximum velocity command</td>
 </tr>
@@ -697,7 +697,7 @@ This list is still under construction.
 <td><code>operation.mcafVelocityCommandMin</code></td>
 <td class="col_macro"><code>MCAF_VELOCITY_COMMAND_MIN</code></td>
 <td></td>
-<td>2.513e+02 </td>
+<td>2.765e+02 </td>
 <td>rad/s</td>
 <td>Minimum velocity command</td>
 </tr>
@@ -705,7 +705,7 @@ This list is still under construction.
 <td><code>operation.mcafVelocityNominal</code></td>
 <td class="col_macro"><code>MCAF_VELOCITY_NOMINAL</code></td>
 <td></td>
-<td>2.094e+03 </td>
+<td>2.304e+03 </td>
 <td>rad/s</td>
 <td>Nominal velocity (base speed): nominal no-load speed at nominal supply voltage with no flux weakening</td>
 </tr>
@@ -719,7 +719,7 @@ This list is still under construction.
 <td><code>operation.run.closedLoopStopping.speed</code></td>
 <td class="col_macro"><code>MCAF_CLOSED_LOOP_STOPPING_SPEED</code></td>
 <td></td>
-<td>1.047e+02 </td>
+<td>1.152e+02 </td>
 <td>rad/s</td>
 <td>Speed threshold for a closed-loop stop</td>
 </tr>
@@ -735,7 +735,7 @@ This list is still under construction.
 <td><code>operation.run.velocityCoastdownTime</code></td>
 <td class="col_macro"><code>VELOCITY_COASTDOWN_TIME</code></td>
 <td></td>
-<td>0.9830361 </td>
+<td>1.0151184 </td>
 <td>s</td>
 <td>estimate of worst-case time needed to decelerate to a stop</td>
 </tr>
@@ -743,7 +743,7 @@ This list is still under construction.
 <td><code>operation.run.velocitySlewrateLimitAccel</code></td>
 <td class="col_macro"><code>VELOCITY_SLEWRATE_LIMIT_ACCEL</code></td>
 <td></td>
-<td>6.6357220 </td>
+<td>1.0617155 </td>
 <td>rad/s</td>
 <td>slew rate limit for velocity commands during acceleration</td>
 </tr>
@@ -751,7 +751,7 @@ This list is still under construction.
 <td><code>operation.run.velocitySlewrateLimitDecel</code></td>
 <td class="col_macro"><code>VELOCITY_SLEWRATE_LIMIT_DECEL</code></td>
 <td></td>
-<td>1.3135765 </td>
+<td>1.3647258 </td>
 <td>rad/s</td>
 <td>slew rate limit for velocity commands during deceleration</td>
 </tr>
@@ -846,7 +846,7 @@ This list is still under construction.
 <td><code>stall_detect.group.activeTimerThresholdLowSpeedDetect</code></td>
 <td class="col_macro"><code>ACTIVE_TIMER_THRESHOLD_LOW_SPEED_DETECT</code></td>
 <td></td>
-<td>0.1732050 </td>
+<td>0.1698492 </td>
 <td>s</td>
 <td>
 Timer threshold to trigger low speed detect.
@@ -857,7 +857,7 @@ It is set to 3 times (1/natural frequency of velocity loop)
 <td><code>stall_detect.group.activeTimerThresholdNegativeEdDetect</code></td>
 <td class="col_macro"><code>ACTIVE_TIMER_THRESHOLD_NEGATIVE_ED_DETECT</code></td>
 <td></td>
-<td>0.2886750 </td>
+<td>0.2830820 </td>
 <td>s</td>
 <td>
 Timer threshold to trigger negative Ed stall detect.
@@ -868,7 +868,7 @@ It is set to 5 times (1/natural frequency of velocity loop)
 <td><code>stall_detect.group.activeTimerThresholdTorqueAngleDetect</code></td>
 <td class="col_macro"><code>ACTIVE_TIMER_THRESHOLD_TORQUE_ANGLE_DETECT</code></td>
 <td></td>
-<td>0.1732050 </td>
+<td>0.1698492 </td>
 <td>s</td>
 <td>
 Timer threshold to trigger stall detect based on torque angle.
@@ -898,7 +898,7 @@ f3db*Ts*2*pi. f3db for 1st stage is 10hz
 <td><code>stall_detect.group.decimationFilterLpf2VarianceDetectCoeffa1</code></td>
 <td class="col_macro"><code>DECIMATION_FILTER_LPF2_VARIANCE_DETECT_COEFFA1</code></td>
 <td></td>
-<td>1.7320516 </td>
+<td>1.7662725 </td>
 <td>Hz</td>
 <td>
 Coefficient a1 for 2 stage implementation of LPF. Equation used for calculation:
@@ -909,7 +909,7 @@ f3db*Ts*2*pi. f3db for second stage is 1/10th of the natural frequency, Ts is 1/
 <td><code>stall_detect.group.filterHpfVarianceDetect</code></td>
 <td class="col_macro"><code>FILTER_HPF_VARIANCE_DETECT</code></td>
 <td></td>
-<td>3.464e+01 </td>
+<td>3.533e+01 </td>
 <td>Hz</td>
 <td>
 HPF filter coefficient for 16bit implementation of HPF.
@@ -920,7 +920,7 @@ f3db is 2x natural frequency.
 <td><code>stall_detect.group.filterLpfNegativeEdDetect</code></td>
 <td class="col_macro"><code>FILTER_LPF_NEGATIVE_ED_DETECT</code></td>
 <td></td>
-<td>1.732e+01 </td>
+<td>1.766e+01 </td>
 <td>Hz</td>
 <td>
 LPF filter coefficient for negative Ed detect. Equation used for calculation:
@@ -931,7 +931,7 @@ f3db*Ts*2*pi f3d is equal to natural frequency
 <td><code>stall_detect.group.filterLpfOvercurrentDetect</code></td>
 <td class="col_macro"><code>FILTER_LPF_OVERCURRENT_DETECT</code></td>
 <td></td>
-<td>1.732e+01 </td>
+<td>1.766e+01 </td>
 <td>Hz</td>
 <td>
 LPF filter coefficient for over current detect. Equation used for calculation:
@@ -942,7 +942,7 @@ f3db*Ts*2*pi f3d is equal to natural frequency
 <td><code>stall_detect.group.inactiveTimerThresholdLowSpeedDetect</code></td>
 <td class="col_macro"><code>INACTIVE_TIMER_THRESHOLD_LOW_SPEED_DETECT</code></td>
 <td></td>
-<td>0.1732050 </td>
+<td>0.1698492 </td>
 <td>s</td>
 <td>
 Inactive timer threshold for low speed detect.
@@ -954,7 +954,7 @@ in units of the ADC ISR period.
 <td><code>stall_detect.group.inactiveTimerThresholdNegativeEdDetect</code></td>
 <td class="col_macro"><code>INACTIVE_TIMER_THRESHOLD_NEGATIVE_ED_DETECT</code></td>
 <td></td>
-<td>0.2886750 </td>
+<td>0.2830820 </td>
 <td>s</td>
 <td>
 Timer threshold to trigger negative Ed stall detect.
@@ -965,7 +965,7 @@ It is set to 5 times (1/natural frequency of velocity loop)
 <td><code>stall_detect.group.inactiveTimerThresholdTorqueAngleDetect</code></td>
 <td class="col_macro"><code>INACTIVE_TIMER_THRESHOLD_TORQUE_ANGLE_DETECT</code></td>
 <td></td>
-<td>0.1732050 </td>
+<td>0.1698492 </td>
 <td>s</td>
 <td>
 Inactive Timer threshold for stall detect based on torque angle.
@@ -990,7 +990,7 @@ It is set to 2 times (1/natural frequency of current loop)
 <td><code>stall_detect.group.timerCountsVarianceDetect</code></td>
 <td class="col_macro"><code>TIMER_COUNTS_VARIANCE_DETECT</code></td>
 <td></td>
-<td>0.0577350 </td>
+<td>0.0566164 </td>
 <td>s</td>
 <td>
 Timer threshold to trigger stall detect based on variance in Ed and Eq.
@@ -1022,7 +1022,7 @@ Torque angle method of stall detection
 <td><code>stall_detect.torque_angle.coeff0</code></td>
 <td class="col_macro"><code>STALL_DETECT_TORQUE_ANGLE_COEFF0</code></td>
 <td></td>
-<td>0.0857937 </td>
+<td>0.0774391 </td>
 <td></td>
 <td>torque angle threshold polynomial, constant term</td>
 </tr>
@@ -1030,7 +1030,7 @@ Torque angle method of stall detection
 <td><code>stall_detect.torque_angle.coeff1</code></td>
 <td class="col_macro"><code>STALL_DETECT_TORQUE_ANGLE_COEFF1</code></td>
 <td></td>
-<td>0.8866532 </td>
+<td>0.8979520 </td>
 <td></td>
 <td>torque angle threshold polynomial, linear term</td>
 </tr>
@@ -1038,7 +1038,7 @@ Torque angle method of stall detection
 <td><code>stall_detect.torque_angle.coeff2</code></td>
 <td class="col_macro"><code>STALL_DETECT_TORQUE_ANGLE_COEFF2</code></td>
 <td></td>
-<td>0.0175531 </td>
+<td>0.0146088 </td>
 <td></td>
 <td>torque angle threshold polynomial, quadratic term</td>
 </tr>
@@ -1046,7 +1046,7 @@ Torque angle method of stall detection
 <td><code>stall_detect.torque_angle.k</code></td>
 <td class="col_macro"><code>STALL_DETECT_TORQUE_ANGLE_K</code></td>
 <td></td>
-<td>0.3901903 </td>
+<td>0.3929351 </td>
 <td></td>
 <td></td>
 </tr>
@@ -1054,7 +1054,7 @@ Torque angle method of stall detection
 <td><code>stall_detect.torque_angle.velocityThreshold</code></td>
 <td class="col_macro"><code>STALL_DETECT_TORQUE_ANGLE_VELOCITY_THRESHOLD</code></td>
 <td></td>
-<td>8.378e+02 </td>
+<td>9.215e+02 </td>
 <td>rad/s</td>
 <td>Maximum velocity for torque angle stall detection (we inhibit at faster speeds)</td>
 </tr>
@@ -1097,7 +1097,7 @@ Torque angle method of stall detection
 <td><code>startup.minspeedinrpm</code></td>
 <td class="col_macro"><code>MINSPEEDINRPM</code></td>
 <td></td>
-<td>2,400 </td>
+<td>2,640 </td>
 <td></td>
 <td>minimum operating speed in RPM</td>
 </tr>
@@ -1113,7 +1113,7 @@ Torque angle method of stall detection
 <td><code>startup.startupAccel1VelocityThreshold</code></td>
 <td class="col_macro"><code>STARTUP_ACCEL1_VELOCITY_THRESHOLD</code></td>
 <td></td>
-<td>2.723e+02 </td>
+<td>2.995e+02 </td>
 <td>rad/s</td>
 <td>second startup threshold velocity</td>
 </tr>
@@ -1177,7 +1177,7 @@ Torque angle method of stall detection
 <td><code>startup.startupDampingThreshold</code></td>
 <td class="col_macro"><code>STARTUP_DAMPING_THRESHOLD</code></td>
 <td></td>
-<td>1.089e+02 </td>
+<td>1.198e+02 </td>
 <td>rad/s</td>
 <td>threshold velocity for damping</td>
 </tr>
@@ -1185,7 +1185,7 @@ Torque angle method of stall detection
 <td><code>startup.startupDeltaTFactor</code></td>
 <td class="col_macro"><code>STARTUP_DELTA_T_FACTOR</code></td>
 <td></td>
-<td>9,830 </td>
+<td>10,813 </td>
 <td></td>
 <td></td>
 </tr>

@@ -62,10 +62,10 @@ extern "C" {
  *                                 2.419 kRPM
  * omega0:                        50.666  rad/s
  *                               483.822  RPM
- * omega_min:                    251.327  rad/s
- *                                 2.400 kRPM
- * omega1:                       272.271  rad/s
- *                                 2.600 kRPM
+ * omega_min:                    276.460  rad/s
+ *                                 2.640 kRPM
+ * omega1:                       299.498  rad/s
+ *                                 2.860 kRPM
  * accel_limit_0:                144.394  rad/s^2
  *                                 1.379 kRPM/s
  * accel_limit_1:                721.972  rad/s^2
@@ -75,14 +75,14 @@ extern "C" {
  * accel1:                       721.972  rad/s^2
  *                                 6.894 kRPM/s
  * t1:                           350.884 ms
- * t2:                           306.945 ms
+ * t2:                           344.657 ms
  * B_desired:                    759.985 uNm/(rad/s)
  * B_added:                      747.774 uNm/(rad/s)
  * damping_gain_ideal:            88.556 mA/(rad/s)
- * damping_gain_max:             173.624 mA/(rad/s)
+ * damping_gain_max:             159.155 mA/(rad/s)
  * damping_gain:                  88.556 mA/(rad/s)
- * damping_threshold:            108.909  rad/s
- *                                 1.040 kRPM
+ * damping_threshold:            119.799  rad/s
+ *                                 1.144 kRPM
  * damping_Imax:                 505.400 mA
  * t_rampup:                     775.649 us
  * dIdt_rampup:                    4.899 kA/s
@@ -103,20 +103,20 @@ extern "C" {
  */
 
 /* first startup threshold velocity */
-#define STARTUP_ACCEL0_VELOCITY_THRESHOLD              528      // Q15(  0.01611) = +483.39844 RPM         = +483.82163 RPM         - 0.0875%
-#define STARTUP_ACCEL0_VELOCITY_THRESHOLD_NORM    0.0161132812  // normalized
-#define STARTUP_ACCEL0_VELOCITY_THRESHOLD_SCALE   3.000000e+04  // RPM
+#define STARTUP_ACCEL0_VELOCITY_THRESHOLD              480      // Q15(  0.01465) = +483.39844 RPM         = +483.82163 RPM         - 0.0875%
+#define STARTUP_ACCEL0_VELOCITY_THRESHOLD_NORM    0.0146484375  // normalized
+#define STARTUP_ACCEL0_VELOCITY_THRESHOLD_SCALE   3.300000e+04  // RPM
 #define STARTUP_ACCEL0_VELOCITY_THRESHOLD_ENG    50.6213660002  // RPM
 /* second startup threshold velocity */
-#define STARTUP_ACCEL1_VELOCITY_THRESHOLD             2840      // Q15(  0.08667) =   +2.60010 kRPM        =   +2.60000 kRPM        + 0.0038%
+#define STARTUP_ACCEL1_VELOCITY_THRESHOLD             2840      // Q15(  0.08667) =   +2.86011 kRPM        =   +2.86000 kRPM        + 0.0038%
 #define STARTUP_ACCEL1_VELOCITY_THRESHOLD_NORM    0.0866699219  // normalized
-#define STARTUP_ACCEL1_VELOCITY_THRESHOLD_SCALE   3.000000e+04  // RPM
-#define STARTUP_ACCEL1_VELOCITY_THRESHOLD_ENG   272.2815898497  // RPM
+#define STARTUP_ACCEL1_VELOCITY_THRESHOLD_SCALE   3.300000e+04  // RPM
+#define STARTUP_ACCEL1_VELOCITY_THRESHOLD_ENG   299.5097488347  // RPM
 /* threshold velocity for damping */
-#define STARTUP_DAMPING_THRESHOLD             1136      // Q15(  0.03467) =   +1.04004 kRPM        =   +1.04000 kRPM        + 0.0038%
+#define STARTUP_DAMPING_THRESHOLD             1136      // Q15(  0.03467) =   +1.14404 kRPM        =   +1.14400 kRPM        + 0.0038%
 #define STARTUP_DAMPING_THRESHOLD_NORM    0.0346679688  // normalized
-#define STARTUP_DAMPING_THRESHOLD_SCALE   3.000000e+04  // RPM
-#define STARTUP_DAMPING_THRESHOLD_ENG   108.9126359399  // RPM
+#define STARTUP_DAMPING_THRESHOLD_SCALE   3.300000e+04  // RPM
+#define STARTUP_DAMPING_THRESHOLD_ENG   119.8038995339  // RPM
 
 /* open loop startup current ramp from initial startup current to startup current */
 /* motor current from end of current rampup phase to end of startup */
@@ -137,24 +137,24 @@ extern "C" {
 /* binary point for active damping gain */
 #define STARTUP_DAMPING_SHIFT                   8
 /* active damping gain */
-#define STARTUP_DAMPING_GAIN                 1619      // Q8(  6.32422)  =  +88.57470 mA/(rad/s)  =  +88.55565 mA/(rad/s)  + 0.0215%
-#define STARTUP_DAMPING_GAIN_NORM        6.3242187500  // normalized
-#define STARTUP_DAMPING_GAIN_SCALE       0.0140056350  // A/(rad/s)
-#define STARTUP_DAMPING_GAIN_ENG         0.0885746994  // A/(rad/s)
+#define STARTUP_DAMPING_GAIN                 1781      // Q8(  6.95703)  =  +88.57967 mA/(rad/s)  =  +88.55565 mA/(rad/s)  + 0.0271%
+#define STARTUP_DAMPING_GAIN_NORM        6.9570312500  // normalized
+#define STARTUP_DAMPING_GAIN_SCALE       0.0127323954  // A/(rad/s)
+#define STARTUP_DAMPING_GAIN_ENG         0.0885796730  // A/(rad/s)
 
 
-#define STARTUP_DELTA_T_FACTOR               9830
+#define STARTUP_DELTA_T_FACTOR              10813
 #define STARTUP_DELTA_T_FACTOR_ACCELERATION          1
 /* first startup acceleration rate */
-#define STARTUP_ACCELERATION0                4935      // Q15(  0.15060) = +144.39001 rad/s^2     = +144.39439 rad/s^2     - 0.0030%
-#define STARTUP_ACCELERATION0_NORM       0.1506042480  // normalized
-#define STARTUP_ACCELERATION0_SCALE    958.7379924285  // rad/s^2
-#define STARTUP_ACCELERATION0_ENG      144.3900144237  // rad/s^2
+#define STARTUP_ACCELERATION0                4486      // Q15(  0.13690) = +144.37831 rad/s^2     = +144.39439 rad/s^2     - 0.0111%
+#define STARTUP_ACCELERATION0_NORM       0.1369018555  // normalized
+#define STARTUP_ACCELERATION0_SCALE      1.054612e+03  // rad/s^2
+#define STARTUP_ACCELERATION0_ENG      144.3783110790  // rad/s^2
 /* second startup acceleration rate */
-#define STARTUP_ACCELERATION1               24676      // Q15(  0.75305) = +721.97933 rad/s^2     = +721.97195 rad/s^2     + 0.0010%
-#define STARTUP_ACCELERATION1_NORM       0.7530517578  // normalized
-#define STARTUP_ACCELERATION1_SCALE    958.7379924285  // rad/s^2
-#define STARTUP_ACCELERATION1_ENG      721.9793304799  // rad/s^2
+#define STARTUP_ACCELERATION1               22432      // Q15(  0.68457) = +721.95592 rad/s^2     = +721.97195 rad/s^2     - 0.0022%
+#define STARTUP_ACCELERATION1_NORM       0.6845703125  // normalized
+#define STARTUP_ACCELERATION1_SCALE      1.054612e+03  // rad/s^2
+#define STARTUP_ACCELERATION1_ENG      721.9559237907  // rad/s^2
 
 /* increase in current per control cycle, during current rampup */
 #define STARTUP_TORQUE_RAMPUP_RATE              182      // Q15(  0.00555) = +244.38477 mA          = +244.95618 mA          - 0.2333%
@@ -221,10 +221,10 @@ extern "C" {
 #define MCAF_STARTUP_REF_FRAME_ALIGN_THRESHOLD_SCALE   3.1415926536  // rad
 #define MCAF_STARTUP_REF_FRAME_ALIGN_THRESHOLD_ENG     0.0500461232  // rad
 /* Frequency of reference frame rotation during alignment */
-#define MCAF_STARTUP_REF_FRAME_ALIGN_FREQUENCY               68      // Q15(  0.00208) =  +19.55826 rad/s elec  =  +19.53124 rad/s elec  + 0.1383%
-#define MCAF_STARTUP_REF_FRAME_ALIGN_FREQUENCY_NORM    0.0020751953  // normalized
-#define MCAF_STARTUP_REF_FRAME_ALIGN_FREQUENCY_SCALE   9.424778e+03  // rad/s elec
-#define MCAF_STARTUP_REF_FRAME_ALIGN_FREQUENCY_ENG    19.5582550455  // rad/s elec
+#define MCAF_STARTUP_REF_FRAME_ALIGN_FREQUENCY               62      // Q15(  0.00189) =  +19.61578 rad/s elec  =  +19.53124 rad/s elec  + 0.4328%
+#define MCAF_STARTUP_REF_FRAME_ALIGN_FREQUENCY_NORM    0.0018920898  // normalized
+#define MCAF_STARTUP_REF_FRAME_ALIGN_FREQUENCY_SCALE   1.036726e+04  // rad/s elec
+#define MCAF_STARTUP_REF_FRAME_ALIGN_FREQUENCY_ENG    19.6157793251  // rad/s elec
 /* Shift count used for reference frame rotation alignment */
 #define MCAF_STARTUP_REF_FRAME_ALIGN_SHIFT         10
 

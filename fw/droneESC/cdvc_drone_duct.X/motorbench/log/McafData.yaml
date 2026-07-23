@@ -1,5 +1,5 @@
 meta :
-  timeStamp : 2026-06-11T10:17:06.266Z
+  timeStamp : 2026-07-22T10:39:06.054Z
 motor:
   Tfr: 0.0048125
   B: 1.2211E-5
@@ -8,8 +8,8 @@ motor:
   rated_current: 11.0
   J: 6.0E-6
   velocity:
-    nominal: 2094.3951023931954
-    maximum: 2303.834612632515
+    nominal: 2303.834612632515
+    maximum: 2513.2741228718346
     units: "rad/s"
   L: 2.51E-6
   R: 0.0809
@@ -49,9 +49,9 @@ metadata:
         type: "opa"
       - name: "CMP1"
         type: "cmp"
-      - name: "UART3"
+      - name: "UART1"
         type: "uart"
-    version: "5.8.4"
+    version: "5.9.0"
     peripheral_library:
       name: "melody"
       version: "NA"
@@ -87,10 +87,10 @@ autotune_result:
     Ki: 737.9574882744789
     pi_phase_lag: 45.0
   velocity:
-    Kp: 0.07615936291855246
+    Kp: 0.07798944984150968
     phase_margin: 65.0
-    wc: 108.82800898537516
-    Ki: 1.4614459474312234
+    wc: 110.9781758174933
+    Ki: 1.5261323897679384
     pi_phase_lag: 10.0
 drive:
   metadata:
@@ -228,11 +228,11 @@ drive:
           direction: "output"
           polarity: "active-high"
         MCAF_BUTTON1:
-          pin: "RC9"
+          pin: "RD12"
           direction: "input"
           polarity: "active-high"
         MCAF_BUTTON2:
-          pin: "RD12"
+          pin: "RC9"
           direction: "input"
           polarity: "active-high"
       uart:

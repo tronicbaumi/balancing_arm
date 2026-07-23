@@ -108,19 +108,19 @@
             "desc": "maximum velocity",
             "key": "omega_m_max",
             "units": "rad/s",
-            "value": 2303.83461263
+            "value": 2513.27412287
         },
         {
             "desc": "nominal (base) velocity",
             "key": "omega_m1",
             "units": "rad/s",
-            "value": 2094.39510239
+            "value": 2303.83461263
         },
         {
             "desc": "nominal electrical frequency",
             "key": "omega_e1",
             "units": "rad/s",
-            "value": 6283.18530718
+            "value": 6911.5038379
         },
         {
             "desc": "rated current",
@@ -132,13 +132,13 @@
             "desc": "nominal voltage",
             "key": "V1",
             "units": "V line-neutral",
-            "value": 11.7902106286
+            "value": 12.9692316915
         },
         {
             "desc": "nominal voltage",
             "key": "V1ll",
             "units": "V line-line",
-            "value": 20.4212438407
+            "value": 22.4633682247
         },
         {
             "desc": "rated torque",
@@ -150,7 +150,7 @@
             "desc": "rated power",
             "key": "P1",
             "units": "W",
-            "value": 194.538475372
+            "value": 213.992322909
         }
     ]
 }

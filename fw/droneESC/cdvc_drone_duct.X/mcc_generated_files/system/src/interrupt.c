@@ -51,21 +51,21 @@ void INTERRUPT_Initialize(void)
     // Priority: 1
     IPC0bits.T1IP = 1;
     
-    // U3EVT: UART3 Event
+    // U1EVT: UART1 Event
     // Priority: 1
-    IPC47bits.U3EVTIP = 1;
+    IPC47bits.U1EVTIP = 1;
     
-    // U3E: UART3 Error
+    // U1E: UART1 Error
     // Priority: 1
-    IPC14bits.U3EIP = 1;
+    IPC12bits.U1EIP = 1;
     
-    // U3TX: UART3 TX
+    // U1TX: UART1 TX
     // Priority: 1
-    IPC14bits.U3TXIP = 1;
+    IPC3bits.U1TXIP = 1;
     
-    // U3RX: UART3 RX
+    // U1RX: UART1 RX
     // Priority: 1
-    IPC14bits.U3RXIP = 1;
+    IPC2bits.U1RXIP = 1;
     
 }
 
@@ -74,8 +74,8 @@ void INTERRUPT_Deinitialize(void)
     //POR default value of priority
     IPC11bits.DMTIP = 4;
     IPC0bits.T1IP = 4;
-    IPC47bits.U3EVTIP = 4;
-    IPC14bits.U3EIP = 4;
-    IPC14bits.U3TXIP = 4;
-    IPC14bits.U3RXIP = 4;
+    IPC47bits.U1EVTIP = 4;
+    IPC12bits.U1EIP = 4;
+    IPC3bits.U1TXIP = 4;
+    IPC2bits.U1RXIP = 4;
 }

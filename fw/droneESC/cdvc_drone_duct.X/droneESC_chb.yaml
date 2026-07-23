@@ -1,0 +1,126 @@
+identification:
+  id: "cdvc-drone02"
+  displayName: "dsPIC33CDVC256MP506 Drone Ref Design"
+  description: "Pallas Reference Design"
+characteristics:
+  device: "dsPIC33CDVC256MP506"
+  gateDriver:
+    device: "MCP8021"
+    configuration:
+      sleepMode: "standby"
+      shortCircuitDetect: false
+      underVoltageLockout: false
+    pins:
+      RX: "RC12"
+      TX: "RC12"
+      fault: "RB12"
+      outputEnable: "RB13"
+  voltage:
+    phase:
+      timeConstant: 6.11E-6
+      fullscale: 36.3
+    dcLink:
+      timeConstant: 6.11E-6
+      fullscale: 36.3
+      minimum: 10.0
+      maximum: 16.0
+      default: 12.0
+  current:
+    phase:
+      fullscale: 22.0
+      maximum:
+        continuous: 10
+      timeConstant: 1.8814E-7
+    dcLink:
+      fullscale: 22.0
+      timeConstant: 1.8814E-7
+  pwm:
+    frequency:
+      minimum: 1000
+      maximum: 100000
+      default: 20000
+    deadTime:
+      minimum: 6.7E-7
+      maximum: 6.0E-6
+      default: 1.0E-6
+    dutyCycle:
+      minimum: 0.009
+      maximum: 0.975
+peripherals:
+  oscillator:
+    clockSource: "internal FRC"
+    inputClockFrequency: 8000000
+  adc:
+    current:
+      a:
+        channel: "AN1"
+        inverted: true
+        signed: true
+      b:
+        channel: "AN4"
+        inverted: true
+        signed: true
+      dcLink:
+        channel: "AN0"
+        inverted: false
+        signed: true
+    voltage:
+      dcLink:
+        channel: "AN12"
+        signed: true
+      a:
+        channel: "AN11"
+        signed: false
+      b:
+        channel: "AN10"
+        signed: false
+      c:
+        channel: "AN2"
+        signed: false
+    other:
+      potentiometer:
+        channel: "AN15"
+        signed: true
+    samplingTime:
+      default: 3.0E-7
+      minimum: 3.0E-7
+      maximum: 3.0E-7
+  pwm:
+    polarity:
+      upper: "active-high"
+      lower: "active-high"
+    generators:
+      a: 1
+      b: 3
+      c: 4
+    fault:
+      polarity: "active-high"
+      source: "CMP1"
+  opamp:
+    enabled:
+    - 1
+    - 2
+    - 3
+  comparator:
+    source: "CMP1A"
+    inverted: false
+    threshold: 0.95
+  gpio:
+    MCAF_LED2:
+      pin: "RB1"
+      direction: "output"
+      polarity: "active-high"
+    MCAF_BUTTON1:
+      pin: "RD12"
+      direction: "input"
+      polarity: "active-high"
+    MCAF_BUTTON2:
+      pin: "RC9"
+      direction: "input"
+      polarity: "active-high"
+  uart:
+    pins:
+      RX: "RC7"
+      TX: "RD10"
+  debugger:
+    channel: 3

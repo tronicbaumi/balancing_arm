@@ -74,19 +74,19 @@ extern "C" {
 //// Velocity loop
 // phase margin = 65 deg
 // PI phase at crossover = 10.000 deg
-// crossover frequency = 108.828 rad/s (17.321 Hz)
+// crossover frequency = 110.978 rad/s (17.663 Hz)
 /* Velocity loop proportional gain */
-#define KWP                                 22273      // Q12(  5.43774) =  +76.15906 mA/(rad/s)  =  +76.15936 mA/(rad/s)  - 0.0004%
-#define KWP_Q                                  12
-#define KWP_NORM                         5.4377441406  // normalized
-#define KWP_SCALE                        0.0140056350  // A/(rad/s)
-#define KWP_ENG                          0.0761590596  // A/(rad/s)
+#define KWP                                 12545      // Q11(  6.12549) =  +77.99214 mA/(rad/s)  =  +77.98945 mA/(rad/s)  + 0.0034%
+#define KWP_Q                                  11
+#define KWP_NORM                         6.1254882812  // normalized
+#define KWP_SCALE                        0.0127323954  // A/(rad/s)
+#define KWP_ENG                          0.0779921391  // A/(rad/s)
 /* Velocity loop integral gain */
-#define KWI                                  3419      // Q15(  0.10434) =   +1.46134 A/rad       =   +1.46145 A/rad       - 0.0071%
+#define KWI                                  3928      // Q15(  0.11987) =   +1.52627 A/rad       =   +1.52613 A/rad       + 0.0091%
 #define KWI_Q                                  15
-#define KWI_NORM                         0.1043395996  // normalized
-#define KWI_SCALE                       14.0056349921  // A/rad
-#define KWI_ENG                          1.4613423473  // A/rad
+#define KWI_NORM                         0.1198730469  // normalized
+#define KWI_SCALE                       12.7323954474  // A/rad
+#define KWI_ENG                          1.5262710363  // A/rad
 
 
 /*

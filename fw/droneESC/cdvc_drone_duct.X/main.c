@@ -1,5 +1,5 @@
 /*
-© [2026] Microchip Technology Inc. and its subsidiaries.
+ï¿½ [2026] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -20,6 +20,7 @@
 */
 #include "mcc_generated_files/motorBench/mcaf_main.h"
 #include "mcc_generated_files/system/system.h"
+#include "arm_can.h"
 #include <xc.h>
 
 /*
@@ -28,12 +29,14 @@
 
 int main(void)
 {
-    SYSTEM_Initialize();    
+    SYSTEM_Initialize();
+    ARM_CAN_Initialize();   /* add CAN receive FIFO + filter for the arm node */
     MCAF_MainInit();
-    
-    
+
+
     while(1)
     {
         MCAF_MainLoop();
-    }    
+        ARM_CAN_Tasks();    /* update arm_angle from received CAN messages */
+    }
 }

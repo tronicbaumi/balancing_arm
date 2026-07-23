@@ -57,152 +57,109 @@
            using the 'Custom Name' field. Application specific name allows the 
            API Portability.
 */
-extern const struct UART_INTERFACE MCP802x_UART;
+extern const struct UART_INTERFACE UART3_Drv;
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_Initialize API
  */
-#define MCP802x_UART_Initialize UART3_Initialize
+#define UART3_Drv_Initialize UART3_Initialize
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_Deinitialize API
  */
-#define MCP802x_UART_Deinitialize UART3_Deinitialize
+#define UART3_Drv_Deinitialize UART3_Deinitialize
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_Read API
  */
-#define MCP802x_UART_Read UART3_Read
+#define UART3_Drv_Read UART3_Read
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_Write API
  */
-#define MCP802x_UART_Write UART3_Write
+#define UART3_Drv_Write UART3_Write
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_IsRxReady API
  */
-#define MCP802x_UART_IsRxReady UART3_IsRxReady
+#define UART3_Drv_IsRxReady UART3_IsRxReady
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_IsTxReady API
  */
-#define MCP802x_UART_IsTxReady UART3_IsTxReady
+#define UART3_Drv_IsTxReady UART3_IsTxReady
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_IsTxDone API
  */
-#define MCP802x_UART_IsTxDone UART3_IsTxDone
+#define UART3_Drv_IsTxDone UART3_IsTxDone
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_TransmitEnable API
  */
-#define MCP802x_UART_TransmitEnable UART3_TransmitEnable
+#define UART3_Drv_TransmitEnable UART3_TransmitEnable
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_TransmitDisable API
  */
-#define MCP802x_UART_TransmitDisable UART3_TransmitDisable
+#define UART3_Drv_TransmitDisable UART3_TransmitDisable
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_AutoBaudSet API
  */
-#define MCP802x_UART_AutoBaudSet UART3_AutoBaudSet
+#define UART3_Drv_AutoBaudSet UART3_AutoBaudSet
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_AutoBaudQuery API
  */
-#define MCP802x_UART_AutoBaudQuery UART3_AutoBaudQuery
+#define UART3_Drv_AutoBaudQuery UART3_AutoBaudQuery
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_AutoBaudEventEnableGet API
  */
-#define MCP802x_UART_AutoBaudEventEnableGet UART3_AutoBaudEventEnableGet
+#define UART3_Drv_AutoBaudEventEnableGet UART3_AutoBaudEventEnableGet
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_ErrorGet API
  */
-#define MCP802x_UART_ErrorGet UART3_ErrorGet
+#define UART3_Drv_ErrorGet UART3_ErrorGet
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_BRGCountSet API
  */
-#define MCP802x_UART_BRGCountSet UART3_BRGCountSet
+#define UART3_Drv_BRGCountSet UART3_BRGCountSet
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_BRGCountGet API
  */
-#define MCP802x_UART_BRGCountGet UART3_BRGCountGet
+#define UART3_Drv_BRGCountGet UART3_BRGCountGet
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_BaudRateSet API
  */
-#define MCP802x_UART_BaudRateSet UART3_BaudRateSet
+#define UART3_Drv_BaudRateSet UART3_BaudRateSet
 
 /**
  * @ingroup  uartdriver
  * @brief    This macro defines the Custom Name for \ref UART3_BaudRateGet API
  */
-#define MCP802x_UART_BaudRateGet UART3_BaudRateGet
-
-/**
- * @ingroup  uartdriver
- * @brief    This macro defines the Custom Name for \ref UART3_TxCollisionInterruptSet API
- */
-#define MCP802x_UART_TxCollisionInterruptSet UART3_TxCollisionInterruptSet
-
-
-/**
- * @ingroup  uartdriver
- * @brief    This macro defines the Custom Name for \ref UART3_RxCompleteCallbackRegister API
- */
-#define MCP802x_UART_RxCompleteCallbackRegister  UART3_RxCompleteCallbackRegister
-
-/**
- * @ingroup  uartdriver
- * @brief    This macro defines the Custom Name for \ref UART3_TxCompleteCallbackRegister API
- */
-#define MCP802x_UART_TxCompleteCallbackRegister  UART3_TxCompleteCallbackRegister
-
-/**
- * @ingroup  uartdriver
- * @brief    This macro defines the Custom Name for \ref UART3_TxCollisionCallbackRegister API
- */
-#define MCP802x_UART_TxCollisionCallbackRegister  UART3_TxCollisionCallbackRegister
-
-/**
- * @ingroup  uartdriver
- * @brief    This macro defines the Custom Name for \ref UART3_FramingErrorCallbackRegister API
- */
-#define MCP802x_UART_FramingErrorCallbackRegister  UART3_FramingErrorCallbackRegister
-
-/**
- * @ingroup  uartdriver
- * @brief    This macro defines the Custom Name for \ref UART3_OverrunErrorCallbackRegister API
- */
-#define MCP802x_UART_OverrunErrorCallbackRegister  UART3_OverrunErrorCallbackRegister
-
-/**
- * @ingroup  uartdriver
- * @brief    This macro defines the Custom Name for \ref UART3_ParityErrorCallbackRegister API
- */
-#define MCP802x_UART_ParityErrorCallbackRegister  UART3_ParityErrorCallbackRegister
+#define UART3_Drv_BaudRateGet UART3_BaudRateGet
 
 // Section: UART3 Driver Routines
 
@@ -225,11 +182,11 @@ void UART3_Deinitialize(void);
 /**
  * @ingroup  uartdriver
  * @brief    Reads a byte of data from the UART3
- * @pre      Check receive status using \ref UART3_IsRxReady function
- *           before calling this function or call this function within the 
- *           \ref UART3_RxCompleteCallback. 
+ * @pre      UART3_Initialize function should have been called
+ *           before calling this function. The transfer status should be checked
+ *           to see  if the receiver is not empty before calling this function.
  * @param    none
- * @return   A data byte received by the driver.
+ * @return   A data byte received by the driver
  */
 uint8_t UART3_Read(void);
 
@@ -286,7 +243,6 @@ void UART3_TransmitEnable(void);
  * @return   none
  */
 void UART3_TransmitDisable(void);
-
 
 /**
  * @ingroup  uartdriver
@@ -351,141 +307,11 @@ uint32_t UART3_BaudRateGet(void);
 
 /**
  * @ingroup  uartdriver
- * @brief    Enable/Disable the Tx collision interrupt of UART3
- * @param[in]  enable - true, enables the Tx collision detection  
- * @param[in]  enable - false, disables the Tx collision detection 
- * @return   none
- */
-void UART3_TxCollisionInterruptSet(const bool enable);
-
-/**
- * @ingroup  uartdriver
  * @brief    Returns the error status of UART3
  * @param    none
  * @return   Errors with masking as per \ref UART3_ERROR_MASKS
  */
 size_t UART3_ErrorGet(void);
 
-/**
- * @ingroup         uartdriver
- * @brief           This function can be used to override default callback 
- *                  \ref UART3_RxCompleteCallback and to define custom callback for 
- *                  UART3 RxComplete event.
- * @param[in][out]  Address of the callback routine
- * @return          none
- */
-void UART3_RxCompleteCallbackRegister(void (*handler)(void));
-
-/**
- * @ingroup  uartdriver
- * @brief    This is the default callback with weak attribute. The user can 
- *           override and implement the default callback without weak attribute 
- *           or can register a custom callback function using UART3_RxCompleteCallbackRegister.
- * @param    none
- * @return   none
- */
-void UART3_RxCompleteCallback(void);
-
-/**
- * @ingroup         uartdriver
- * @brief           This function can be used to override default callback 
- *                  \ref UART3_TxCompleteCallback and to define custom callback for 
- *                  UART3 TxComplete event.
- * @param[in][out]  Address of the callback routine
- * @return          none
- */
-void UART3_TxCompleteCallbackRegister(void (*handler)(void));
-
-/**
- * @ingroup  uartdriver
- * @brief    This is the default callback with weak attribute. The user can 
- *           override and implement the default callback without weak attribute 
- *           or can register a custom callback function using UART3_TxCompleteCallbackRegister.
- * @param    none
- * @return   none
- * @note            This callback is triggerred if there is data in the software buffer and there is atleast 
- *                  one byte space in hardware transmit FIFO 
- */
-void UART3_TxCompleteCallback(void);
-
-/**
- * @ingroup         uartdriver
- * @brief           This function can be used to override default callback 
- *                  \ref UART3_TxCollisionCallback and to define custom callback for 
- *                  UART3 TxCollision event.
- * @param[in][out]  Address of the callback routine
- * @return          none
- */
-void UART3_TxCollisionCallbackRegister(void (*handler)(void));
-
-/**
- * @ingroup  uartdriver
- * @brief    This is the default callback with weak attribute. The user can 
- *           override and implement the default callback without weak attribute 
- *           or can register a custom callback function using UART3_TxCollisionCallbackRegister.
- * @param    none
- * @return   none
- */
-void UART3_TxCollisionCallback(void);
-
-/**
- * @ingroup         uartdriver
- * @brief           This function can be used to override default callback 
- *                  \ref UART3_FramingErrorCallback and to define custom callback for 
- *                  UART3 FramingError event.
- * @param[in][out]  Address of the callback routine
- * @return          none
- */
-void UART3_FramingErrorCallbackRegister(void (*handler)(void));
-
-/**
- * @ingroup  uartdriver
- * @brief    This is the default callback with weak attribute. The user can 
- *           override and implement the default callback without weak attribute 
- *           or can register a custom callback function using UART3_FramingErrorCallbackRegister.
- * @param    none
- * @return   none
- */
-void UART3_FramingErrorCallback(void);
-
-/**
- * @ingroup         uartdriver
- * @brief           This function can be used to override default callback 
- *                  \ref UART3_OverrunErrorCallback and to define custom callback for 
- *                  UART3 OverrunError event.
- * @param[in][out]  Address of the callback routine
- * @return          none
- */
-void UART3_OverrunErrorCallbackRegister(void (*handler)(void));
-
-/**
- * @ingroup  uartdriver
- * @brief    This is the default callback with weak attribute. The user can 
- *           override and implement the default callback without weak attribute 
- *           or can register a custom callback function using UART3_OverrunErrorCallbackRegister.
- * @param    none
- * @return   none
- */
-void UART3_OverrunErrorCallback(void);
-
-/**
- * @ingroup         uartdriver
- * @brief           This function can be used to override default callback 
- *                  \ref UART3_ParityErrorCallback and to define custom callback for 
- *                  UART3 ParityError event.
- * @param[in][out]  Address of the callback routine
- * @return          none
- */
-void UART3_ParityErrorCallbackRegister(void (*handler)(void));
-
-/**
- * @ingroup  uartdriver
- * @brief    This is the default callback with weak attribute. The user can 
- *           override and implement the default callback without weak attribute 
- *           or can register a custom callback function using UART3_ParityErrorCallbackRegister.
- * @param    none
- * @return   none
- */
-void UART3_ParityErrorCallback(void);
 #endif  // UART3_H
 

@@ -50,16 +50,16 @@ extern "C" {
 #endif
 
 /* Normalized sampling time for theta calculation */
-#define ATPLL_NORM_DELTAT                    4915      // Q15(  0.14999) =  +49.99797 useconds    =  +50.00000 useconds    - 0.0041%
-#define ATPLL_NORM_DELTAT_NORM           0.1499938965  // normalized
-#define ATPLL_NORM_DELTAT_SCALE          0.0003333333  // seconds
-#define ATPLL_NORM_DELTAT_ENG            4.999797e-05  // seconds
+#define ATPLL_NORM_DELTAT                    5407      // Q15(  0.16501) =  +50.00259 useconds    =  +50.00000 useconds    + 0.0052%
+#define ATPLL_NORM_DELTAT_NORM           0.1650085449  // normalized
+#define ATPLL_NORM_DELTAT_SCALE          0.0003030303  // seconds
+#define ATPLL_NORM_DELTAT_ENG            5.000259e-05  // seconds
 
 /* Normalized sampling time for estimator Ki output */
-#define ATPLL_NORM_DELTAT_KI                  515      // Q15(  0.01572) =   +1.66758 useconds    =   +1.66667 useconds    + 0.0547%
-#define ATPLL_NORM_DELTAT_KI_NORM        0.0157165527  // normalized
-#define ATPLL_NORM_DELTAT_KI_SCALE       0.0001061033  // seconds
-#define ATPLL_NORM_DELTAT_KI_ENG         1.667578e-06  // seconds
+#define ATPLL_NORM_DELTAT_KI                  566      // Q15(  0.01727) =   +1.66611 useconds    =   +1.66667 useconds    - 0.0336%
+#define ATPLL_NORM_DELTAT_KI_NORM        0.0172729492  // normalized
+#define ATPLL_NORM_DELTAT_KI_SCALE       9.645754e-05  // seconds
+#define ATPLL_NORM_DELTAT_KI_ENG         1.666106e-06  // seconds
 
 /* Filter constant that is used for filtering the PI Omega Output */
 #define KFILTER_PI_OMEGA                    21845      // Q15(  0.66666) =  +13.33313 krad/s      =  +13.33333 krad/s      - 0.0015%

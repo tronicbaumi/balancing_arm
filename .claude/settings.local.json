@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__mchp_docs__search_evk_user_guide",
+      "mcp__mchp_docs__search_datasheet",
+      "WebSearch",
+      "WebFetch(domain:www.microchip.com)",
+      "mcp__mchp_docs__get_example_projects",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:ww1.microchip.com)"
+    ]
+  }
+}

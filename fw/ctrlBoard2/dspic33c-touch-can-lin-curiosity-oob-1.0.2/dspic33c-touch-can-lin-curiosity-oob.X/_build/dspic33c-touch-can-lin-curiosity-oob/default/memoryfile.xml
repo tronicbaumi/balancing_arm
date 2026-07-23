@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="default.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>126976</length>
+      <used>290</used>
+      <free>126686</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>1080192</length>
+      <used>20589</used>
+      <free>1059603</free>
+    </memory>
+  </executable>
+</project>

@@ -118,11 +118,11 @@ inline static bool MCAF_DutyCycleFeedbackIncludesClipping(void) { return true; }
 
 /** Enable use of MCAPI_AdcIsrPrologUserFunction()?
  */
-inline static bool MCAF_AdcIsrPrologEnabled(void) { return false; }
+inline static bool MCAF_AdcIsrPrologEnabled(void) { return true; }
 
 /** Enable use of MCAPI_AdcIsrEpilogUserFunction()?
  */
-inline static bool MCAF_AdcIsrEpilogEnabled(void) { return false; }
+inline static bool MCAF_AdcIsrEpilogEnabled(void) { return true; }
 
 /** Does the STOPPING state (transition towards zero-speed) use closed-loop current control?
  *  If so, current will be controlled and PWM outputs kept active.

@@ -198,105 +198,156 @@
 
 /**
  * @ingroup  pinsdriver
- * @brief    Sets the RC9 GPIO Pin which has a custom name of MCAF_BUTTON1 to High
+ * @brief    Sets the RC9 GPIO Pin which has a custom name of MCAF_BUTTON2 to High
  * @pre      The RC9 must be set as Output Pin             
  * @param    none
  * @return   none  
  */
-#define MCAF_BUTTON1_SetHigh()          (_LATC9 = 1)
+#define MCAF_BUTTON2_SetHigh()          (_LATC9 = 1)
 
 /**
  * @ingroup  pinsdriver
- * @brief    Sets the RC9 GPIO Pin which has a custom name of MCAF_BUTTON1 to Low
+ * @brief    Sets the RC9 GPIO Pin which has a custom name of MCAF_BUTTON2 to Low
  * @pre      The RC9 must be set as Output Pin
  * @param    none
  * @return   none  
  */
-#define MCAF_BUTTON1_SetLow()           (_LATC9 = 0)
+#define MCAF_BUTTON2_SetLow()           (_LATC9 = 0)
 
 /**
  * @ingroup  pinsdriver
- * @brief    Toggles the RC9 GPIO Pin which has a custom name of MCAF_BUTTON1
+ * @brief    Toggles the RC9 GPIO Pin which has a custom name of MCAF_BUTTON2
  * @pre      The RC9 must be set as Output Pin
  * @param    none
  * @return   none  
  */
-#define MCAF_BUTTON1_Toggle()           (_LATC9 ^= 1)
+#define MCAF_BUTTON2_Toggle()           (_LATC9 ^= 1)
 
 /**
  * @ingroup  pinsdriver
- * @brief    Reads the value of the RC9 GPIO Pin which has a custom name of MCAF_BUTTON1
+ * @brief    Reads the value of the RC9 GPIO Pin which has a custom name of MCAF_BUTTON2
  * @param    none
  * @return   none  
  */
-#define MCAF_BUTTON1_GetValue()         _RC9
+#define MCAF_BUTTON2_GetValue()         _RC9
 
 /**
  * @ingroup  pinsdriver
- * @brief    Configures the RC9 GPIO Pin which has a custom name of MCAF_BUTTON1 as Input
+ * @brief    Configures the RC9 GPIO Pin which has a custom name of MCAF_BUTTON2 as Input
  * @param    none
  * @return   none  
  */
-#define MCAF_BUTTON1_SetDigitalInput()  (_TRISC9 = 1)
+#define MCAF_BUTTON2_SetDigitalInput()  (_TRISC9 = 1)
 
 /**
  * @ingroup  pinsdriver
- * @brief    Configures the RC9 GPIO Pin which has a custom name of MCAF_BUTTON1 as Output
+ * @brief    Configures the RC9 GPIO Pin which has a custom name of MCAF_BUTTON2 as Output
  * @param    none
  * @return   none  
  */
-#define MCAF_BUTTON1_SetDigitalOutput() (_TRISC9 = 0)
+#define MCAF_BUTTON2_SetDigitalOutput() (_TRISC9 = 0)
 
 /**
  * @ingroup  pinsdriver
- * @brief    Sets the RD12 GPIO Pin which has a custom name of MCAF_BUTTON2 to High
+ * @brief    Sets the RC10 GPIO Pin which has a custom name of CAN_STBY to High
+ * @pre      The RC10 must be set as Output Pin             
+ * @param    none
+ * @return   none  
+ */
+#define CAN_STBY_SetHigh()          (_LATC10 = 1)
+
+/**
+ * @ingroup  pinsdriver
+ * @brief    Sets the RC10 GPIO Pin which has a custom name of CAN_STBY to Low
+ * @pre      The RC10 must be set as Output Pin
+ * @param    none
+ * @return   none  
+ */
+#define CAN_STBY_SetLow()           (_LATC10 = 0)
+
+/**
+ * @ingroup  pinsdriver
+ * @brief    Toggles the RC10 GPIO Pin which has a custom name of CAN_STBY
+ * @pre      The RC10 must be set as Output Pin
+ * @param    none
+ * @return   none  
+ */
+#define CAN_STBY_Toggle()           (_LATC10 ^= 1)
+
+/**
+ * @ingroup  pinsdriver
+ * @brief    Reads the value of the RC10 GPIO Pin which has a custom name of CAN_STBY
+ * @param    none
+ * @return   none  
+ */
+#define CAN_STBY_GetValue()         _RC10
+
+/**
+ * @ingroup  pinsdriver
+ * @brief    Configures the RC10 GPIO Pin which has a custom name of CAN_STBY as Input
+ * @param    none
+ * @return   none  
+ */
+#define CAN_STBY_SetDigitalInput()  (_TRISC10 = 1)
+
+/**
+ * @ingroup  pinsdriver
+ * @brief    Configures the RC10 GPIO Pin which has a custom name of CAN_STBY as Output
+ * @param    none
+ * @return   none  
+ */
+#define CAN_STBY_SetDigitalOutput() (_TRISC10 = 0)
+
+/**
+ * @ingroup  pinsdriver
+ * @brief    Sets the RD12 GPIO Pin which has a custom name of MCAF_BUTTON1 to High
  * @pre      The RD12 must be set as Output Pin             
  * @param    none
  * @return   none  
  */
-#define MCAF_BUTTON2_SetHigh()          (_LATD12 = 1)
+#define MCAF_BUTTON1_SetHigh()          (_LATD12 = 1)
 
 /**
  * @ingroup  pinsdriver
- * @brief    Sets the RD12 GPIO Pin which has a custom name of MCAF_BUTTON2 to Low
+ * @brief    Sets the RD12 GPIO Pin which has a custom name of MCAF_BUTTON1 to Low
  * @pre      The RD12 must be set as Output Pin
  * @param    none
  * @return   none  
  */
-#define MCAF_BUTTON2_SetLow()           (_LATD12 = 0)
+#define MCAF_BUTTON1_SetLow()           (_LATD12 = 0)
 
 /**
  * @ingroup  pinsdriver
- * @brief    Toggles the RD12 GPIO Pin which has a custom name of MCAF_BUTTON2
+ * @brief    Toggles the RD12 GPIO Pin which has a custom name of MCAF_BUTTON1
  * @pre      The RD12 must be set as Output Pin
  * @param    none
  * @return   none  
  */
-#define MCAF_BUTTON2_Toggle()           (_LATD12 ^= 1)
+#define MCAF_BUTTON1_Toggle()           (_LATD12 ^= 1)
 
 /**
  * @ingroup  pinsdriver
- * @brief    Reads the value of the RD12 GPIO Pin which has a custom name of MCAF_BUTTON2
+ * @brief    Reads the value of the RD12 GPIO Pin which has a custom name of MCAF_BUTTON1
  * @param    none
  * @return   none  
  */
-#define MCAF_BUTTON2_GetValue()         _RD12
+#define MCAF_BUTTON1_GetValue()         _RD12
 
 /**
  * @ingroup  pinsdriver
- * @brief    Configures the RD12 GPIO Pin which has a custom name of MCAF_BUTTON2 as Input
+ * @brief    Configures the RD12 GPIO Pin which has a custom name of MCAF_BUTTON1 as Input
  * @param    none
  * @return   none  
  */
-#define MCAF_BUTTON2_SetDigitalInput()  (_TRISD12 = 1)
+#define MCAF_BUTTON1_SetDigitalInput()  (_TRISD12 = 1)
 
 /**
  * @ingroup  pinsdriver
- * @brief    Configures the RD12 GPIO Pin which has a custom name of MCAF_BUTTON2 as Output
+ * @brief    Configures the RD12 GPIO Pin which has a custom name of MCAF_BUTTON1 as Output
  * @param    none
  * @return   none  
  */
-#define MCAF_BUTTON2_SetDigitalOutput() (_TRISD12 = 0)
+#define MCAF_BUTTON1_SetDigitalOutput() (_TRISD12 = 0)
 
 /**
  * @ingroup  pinsdriver

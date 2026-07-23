@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/_data/github/balancing_arm/fw/ctrlBoard2/dspic33c-touch-can-lin-curiosity-oob-1.0.2/dspic33c-touch-can-lin-curiosity-oob.X/_build/dspic33c-touch-can-lin-curiosity-oob/default/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

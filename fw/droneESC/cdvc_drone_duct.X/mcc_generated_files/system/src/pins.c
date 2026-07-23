@@ -58,7 +58,7 @@ void PINS_Initialize(void)
      ***************************************************************************/
     TRISA = 0x001FU;
     TRISB = 0x13FDU;
-    TRISC = 0xEFFFU;
+    TRISC = 0xE3FFU;
     TRISD = 0xFBFCU;
 
 
@@ -90,7 +90,7 @@ void PINS_Initialize(void)
     ANSELA = 0x001FU;
     ANSELB = 0x039DU;
     ANSELC = 0x004FU;
-    ANSELD = 0x2800U;
+    ANSELD = 0x2000U;
 
     /****************************************************************************
      * Set the PPS
@@ -98,9 +98,12 @@ void PINS_Initialize(void)
      __builtin_write_RPCON(0x0000); // unlock PPS
 
         RPINR19bits.U2RXR = 0x0037U; //RC7->UART2:U2RX;
-        RPINR27bits.U3RXR = 0x003CU; //RC12->UART3:U3RX;
+        RPINR27bits.U3RXR = 0x004BU; //RD11->UART3:U3RX;
+        RPINR26bits.CAN1RXR = 0x0034U; //RC4->CAN1:CAN1RX;
+        RPINR18bits.U1RXR = 0x003CU; //RC12->UART1:U1RX;
         RPOR21bits.RP74R = 0x0003U;  //RD10->UART2:U2TX;
-        RPOR14bits.RP60R = 0x001BU;  //RC12->UART3:U3TX;
+        RPOR13bits.RP59R = 0x0015U;  //RC11->CAN1:CAN1TX;
+        RPOR14bits.RP60R = 0x0001U;  //RC12->UART1:U1TX;
 
      __builtin_write_RPCON(0x0800); // lock PPS
 

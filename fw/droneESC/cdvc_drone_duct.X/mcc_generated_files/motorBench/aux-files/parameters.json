@@ -156,7 +156,7 @@
             "intended_value": 5e-05,
             "key": "atpll.atpllNormDeltat",
             "q": 15,
-            "scale": 0.000333333333333,
+            "scale": 0.00030303030303,
             "units": "seconds"
         },
         {
@@ -165,7 +165,7 @@
             "intended_value": 1.66666666667e-06,
             "key": "atpll.atpllNormDeltatKi",
             "q": 15,
-            "scale": 0.000106103295395,
+            "scale": 9.64575412678e-05,
             "units": "seconds"
         },
         {
@@ -252,19 +252,19 @@
         {
             "define_name": "KWI",
             "description": "Velocity loop integral gain",
-            "intended_value": 1.46144594743,
+            "intended_value": 1.52613238977,
             "key": "foc.kwi",
             "q": 15,
-            "scale": 14.0056349921,
+            "scale": 12.7323954474,
             "units": "A/rad"
         },
         {
             "define_name": "KWP",
             "description": "Velocity loop proportional gain",
-            "intended_value": 0.0761593629186,
+            "intended_value": 0.0779894498415,
             "key": "foc.kwp",
-            "q": 12,
-            "scale": 0.0140056349921,
+            "q": 11,
+            "scale": 0.0127323954474,
             "units": "A/(rad/s)"
         },
         {
@@ -397,7 +397,7 @@
         {
             "define_name": "MCAPI_FULLSCALE_VELOCITY",
             "description": "RPM",
-            "intended_value": 30000.0,
+            "intended_value": 33000.0,
             "key": "mcapi.fullscale.velocity",
             "units": null
         },
@@ -429,19 +429,19 @@
         {
             "define_name": "MCAPI_MAXIMUM_VELOCITY",
             "description": "Maximum velocity command",
-            "intended_value": 2303.83461263,
+            "intended_value": 2513.27412287,
             "key": "mcapi.mcapiMaximumVelocity",
             "q": 15,
-            "scale": 3141.59265359,
+            "scale": 3455.75191895,
             "units": "rad/s"
         },
         {
             "define_name": "MCAPI_MINIMUM_VELOCITY",
             "description": "Minimum velocity command",
-            "intended_value": 251.327412287,
+            "intended_value": 276.460153516,
             "key": "mcapi.mcapiMinimumVelocity",
             "q": 15,
-            "scale": 3141.59265359,
+            "scale": 3455.75191895,
             "units": "rad/s"
         },
         {
@@ -450,7 +450,7 @@
             "intended_value": 0.00562941090491,
             "key": "motor.ke",
             "q": 12,
-            "scale": 0.0115546488685,
+            "scale": 0.0105042262441,
             "units": "V/(rad/s)"
         },
         {
@@ -459,7 +459,7 @@
             "intended_value": 177.638480632,
             "key": "motor.keInverse",
             "q": 13,
-            "scale": 86.545252165,
+            "scale": 95.1997773815,
             "units": "(rad/s)/V"
         },
         {
@@ -477,7 +477,7 @@
             "intended_value": 2.51e-06,
             "key": "motor.l0BaseOmegaE",
             "q": 15,
-            "scale": 8.75352187005e-05,
+            "scale": 7.95774715459e-05,
             "units": "H"
         },
         {
@@ -495,7 +495,7 @@
             "intended_value": -4.5544849632e-07,
             "key": "motor.l1BaseOmegaE",
             "q": 15,
-            "scale": 8.75352187005e-05,
+            "scale": 7.95774715459e-05,
             "units": "H"
         },
         {
@@ -513,7 +513,7 @@
             "intended_value": 2.05455150368e-06,
             "key": "motor.ldBaseOmegaE",
             "q": 15,
-            "scale": 8.75352187005e-05,
+            "scale": 7.95774715459e-05,
             "units": "H"
         },
         {
@@ -531,7 +531,7 @@
             "intended_value": 2.96544849632e-06,
             "key": "motor.lmaxBaseOmegaE",
             "q": 15,
-            "scale": 8.75352187005e-05,
+            "scale": 7.95774715459e-05,
             "units": "H"
         },
         {
@@ -549,7 +549,7 @@
             "intended_value": 2.96544849632e-06,
             "key": "motor.lqBaseOmegaE",
             "q": 15,
-            "scale": 8.75352187005e-05,
+            "scale": 7.95774715459e-05,
             "units": "H"
         },
         {
@@ -567,7 +567,7 @@
             "intended_value": 2.51e-06,
             "key": "motor.lsBaseOmegaE",
             "q": 15,
-            "scale": 8.75352187005e-05,
+            "scale": 7.95774715459e-05,
             "units": "H"
         },
         {
@@ -585,7 +585,7 @@
             "intended_value": 0.00187647030164,
             "key": "motor.psiBaseOmegaE",
             "q": 14,
-            "scale": 0.00385154962282,
+            "scale": 0.00350140874802,
             "units": "V*s"
         },
         {
@@ -634,37 +634,37 @@
         {
             "define_name": "MCAF_VELOCITY_COMMAND_MAX",
             "description": "Maximum velocity command",
-            "intended_value": 2303.83461263,
+            "intended_value": 2513.27412287,
             "key": "operation.mcafVelocityCommandMax",
             "q": 15,
-            "scale": 3141.59265359,
+            "scale": 3455.75191895,
             "units": "rad/s"
         },
         {
             "define_name": "MCAF_VELOCITY_COMMAND_MIN",
             "description": "Minimum velocity command",
-            "intended_value": 251.327412287,
+            "intended_value": 276.460153516,
             "key": "operation.mcafVelocityCommandMin",
             "q": 15,
-            "scale": 3141.59265359,
+            "scale": 3455.75191895,
             "units": "rad/s"
         },
         {
             "define_name": "MCAF_VELOCITY_NOMINAL",
             "description": "Nominal velocity (base speed): nominal no-load speed at nominal supply voltage with no flux weakening",
-            "intended_value": 2094.39510239,
+            "intended_value": 2303.83461263,
             "key": "operation.mcafVelocityNominal",
             "q": 15,
-            "scale": 3141.59265359,
+            "scale": 3455.75191895,
             "units": "rad/s"
         },
         {
             "define_name": "MCAF_CLOSED_LOOP_STOPPING_SPEED",
             "description": "Speed threshold for a closed-loop stop",
-            "intended_value": 104.71975512,
+            "intended_value": 115.191730632,
             "key": "operation.run.closedLoopStopping.speed",
             "q": 15,
-            "scale": 3141.59265359,
+            "scale": 3455.75191895,
             "units": "rad/s"
         },
         {
@@ -679,7 +679,7 @@
         {
             "define_name": "VELOCITY_COASTDOWN_TIME",
             "description": "estimate of worst-case time needed to decelerate to a stop",
-            "intended_value": 0.983036090431,
+            "intended_value": 1.01511836182,
             "key": "operation.run.velocityCoastdownTime",
             "q": 0,
             "scale": 5e-05,
@@ -688,19 +688,19 @@
         {
             "define_name": "VELOCITY_SLEWRATE_LIMIT_ACCEL",
             "description": "slew rate limit for velocity commands during acceleration",
-            "intended_value": 6.63572196447,
+            "intended_value": 1.06171551431,
             "key": "operation.run.velocitySlewrateLimitAccel",
             "q": 15,
-            "scale": 3141.59265359,
+            "scale": 3455.75191895,
             "units": "rad/s"
         },
         {
             "define_name": "VELOCITY_SLEWRATE_LIMIT_DECEL",
             "description": "slew rate limit for velocity commands during deceleration",
-            "intended_value": 1.31357650524,
+            "intended_value": 1.36472582243,
             "key": "operation.run.velocitySlewrateLimitDecel",
             "q": 15,
-            "scale": 3141.59265359,
+            "scale": 3455.75191895,
             "units": "rad/s"
         },
         {
@@ -787,7 +787,7 @@
         {
             "define_name": "ACTIVE_TIMER_THRESHOLD_LOW_SPEED_DETECT",
             "description": "Timer threshold to trigger low speed detect.\nIt is set to 3 times (1/natural frequency of velocity loop)",
-            "intended_value": 0.173205005745,
+            "intended_value": 0.16984921389,
             "key": "stall_detect.group.activeTimerThresholdLowSpeedDetect",
             "q": 0,
             "scale": 5e-05,
@@ -796,7 +796,7 @@
         {
             "define_name": "ACTIVE_TIMER_THRESHOLD_NEGATIVE_ED_DETECT",
             "description": "Timer threshold to trigger negative Ed stall detect.\nIt is set to 5 times (1/natural frequency of velocity loop)",
-            "intended_value": 0.288675009575,
+            "intended_value": 0.28308202315,
             "key": "stall_detect.group.activeTimerThresholdNegativeEdDetect",
             "q": 0,
             "scale": 5e-05,
@@ -805,7 +805,7 @@
         {
             "define_name": "ACTIVE_TIMER_THRESHOLD_TORQUE_ANGLE_DETECT",
             "description": "Timer threshold to trigger stall detect based on torque angle.\nIt is set to 3 times (1/natural frequency of velocity loop)",
-            "intended_value": 0.173205005745,
+            "intended_value": 0.16984921389,
             "key": "stall_detect.group.activeTimerThresholdTorqueAngleDetect",
             "q": 0,
             "scale": 5e-05,
@@ -832,7 +832,7 @@
         {
             "define_name": "DECIMATION_FILTER_LPF2_VARIANCE_DETECT_COEFFA1",
             "description": "Coefficient a1 for 2 stage implementation of LPF. Equation used for calculation:\nf3db*Ts*2*pi. f3db for second stage is 1/10th of the natural frequency, Ts is 1/200hz",
-            "intended_value": 1.73205155769,
+            "intended_value": 1.76627252567,
             "key": "stall_detect.group.decimationFilterLpf2VarianceDetectCoeffa1",
             "q": 15,
             "scale": 31.8309886184,
@@ -841,7 +841,7 @@
         {
             "define_name": "FILTER_HPF_VARIANCE_DETECT",
             "description": "HPF filter coefficient for 16bit implementation of HPF.\nf3db is 2x natural frequency.",
-            "intended_value": 34.6410311537,
+            "intended_value": 35.3254505134,
             "key": "stall_detect.group.filterHpfVarianceDetect",
             "q": 16,
             "scale": 3183.09886184,
@@ -850,7 +850,7 @@
         {
             "define_name": "FILTER_LPF_NEGATIVE_ED_DETECT",
             "description": "LPF filter coefficient for negative Ed detect. Equation used for calculation:\nf3db*Ts*2*pi f3d is equal to natural frequency",
-            "intended_value": 17.3205155769,
+            "intended_value": 17.6627252567,
             "key": "stall_detect.group.filterLpfNegativeEdDetect",
             "q": 15,
             "scale": 3183.09886184,
@@ -859,7 +859,7 @@
         {
             "define_name": "FILTER_LPF_OVERCURRENT_DETECT",
             "description": "LPF filter coefficient for over current detect. Equation used for calculation:\nf3db*Ts*2*pi f3d is equal to natural frequency",
-            "intended_value": 17.3205155769,
+            "intended_value": 17.6627252567,
             "key": "stall_detect.group.filterLpfOvercurrentDetect",
             "q": 15,
             "scale": 3183.09886184,
@@ -868,7 +868,7 @@
         {
             "define_name": "INACTIVE_TIMER_THRESHOLD_LOW_SPEED_DETECT",
             "description": "Inactive timer threshold for low speed detect.\nIt is set to (2.0/natural frequency of velocity loop),\nin units of the ADC ISR period.",
-            "intended_value": 0.173205005745,
+            "intended_value": 0.16984921389,
             "key": "stall_detect.group.inactiveTimerThresholdLowSpeedDetect",
             "q": 0,
             "scale": 5e-05,
@@ -877,7 +877,7 @@
         {
             "define_name": "INACTIVE_TIMER_THRESHOLD_NEGATIVE_ED_DETECT",
             "description": "Timer threshold to trigger negative Ed stall detect.\nIt is set to 5 times (1/natural frequency of velocity loop)",
-            "intended_value": 0.288675009575,
+            "intended_value": 0.28308202315,
             "key": "stall_detect.group.inactiveTimerThresholdNegativeEdDetect",
             "q": 0,
             "scale": 5e-05,
@@ -886,7 +886,7 @@
         {
             "define_name": "INACTIVE_TIMER_THRESHOLD_TORQUE_ANGLE_DETECT",
             "description": "Inactive Timer threshold for stall detect based on torque angle.\nIt is set to 3 times (1/natural frequency of velocity loop)",
-            "intended_value": 0.173205005745,
+            "intended_value": 0.16984921389,
             "key": "stall_detect.group.inactiveTimerThresholdTorqueAngleDetect",
             "q": 0,
             "scale": 5e-05,
@@ -904,7 +904,7 @@
         {
             "define_name": "TIMER_COUNTS_VARIANCE_DETECT",
             "description": "Timer threshold to trigger stall detect based on variance in Ed and Eq.\nIt is set to (1/natural frequency of velocity loop)",
-            "intended_value": 0.057735001915,
+            "intended_value": 0.05661640463,
             "key": "stall_detect.group.timerCountsVarianceDetect",
             "q": 0,
             "scale": 0.005,
@@ -931,7 +931,7 @@
         {
             "define_name": "STALL_DETECT_TORQUE_ANGLE_COEFF0",
             "description": "torque angle threshold polynomial, constant term",
-            "intended_value": 0.0857937487045,
+            "intended_value": 0.0774391343893,
             "key": "stall_detect.torque_angle.coeff0",
             "q": 15,
             "scale": 1.0,
@@ -940,7 +940,7 @@
         {
             "define_name": "STALL_DETECT_TORQUE_ANGLE_COEFF1",
             "description": "torque angle threshold polynomial, linear term",
-            "intended_value": 0.886653167432,
+            "intended_value": 0.897952026592,
             "key": "stall_detect.torque_angle.coeff1",
             "q": 15,
             "scale": 1.0,
@@ -949,7 +949,7 @@
         {
             "define_name": "STALL_DETECT_TORQUE_ANGLE_COEFF2",
             "description": "torque angle threshold polynomial, quadratic term",
-            "intended_value": 0.0175530838632,
+            "intended_value": 0.0146088390186,
             "key": "stall_detect.torque_angle.coeff2",
             "q": 15,
             "scale": 1.0,
@@ -958,7 +958,7 @@
         {
             "define_name": "STALL_DETECT_TORQUE_ANGLE_K",
             "description": null,
-            "intended_value": 0.390190294279,
+            "intended_value": 0.392935079633,
             "key": "stall_detect.torque_angle.k",
             "q": 15,
             "scale": 1.0,
@@ -967,10 +967,10 @@
         {
             "define_name": "STALL_DETECT_TORQUE_ANGLE_VELOCITY_THRESHOLD",
             "description": "Maximum velocity for torque angle stall detection (we inhibit at faster speeds)",
-            "intended_value": 837.758040957,
+            "intended_value": 921.533845053,
             "key": "stall_detect.torque_angle.velocityThreshold",
             "q": 15,
-            "scale": 3141.59265359,
+            "scale": 3455.75191895,
             "units": "rad/s"
         },
         {
@@ -1012,7 +1012,7 @@
         {
             "define_name": "MINSPEEDINRPM",
             "description": "minimum operating speed in RPM",
-            "intended_value": 2400,
+            "intended_value": 2640,
             "key": "startup.minspeedinrpm",
             "units": null
         },
@@ -1022,16 +1022,16 @@
             "intended_value": 50.6656823959,
             "key": "startup.startupAccel0VelocityThreshold",
             "q": 15,
-            "scale": 3141.59265359,
+            "scale": 3455.75191895,
             "units": "rad/s"
         },
         {
             "define_name": "STARTUP_ACCEL1_VELOCITY_THRESHOLD",
             "description": "second startup threshold velocity",
-            "intended_value": 272.271363311,
+            "intended_value": 299.498499642,
             "key": "startup.startupAccel1VelocityThreshold",
             "q": 15,
-            "scale": 3141.59265359,
+            "scale": 3455.75191895,
             "units": "rad/s"
         },
         {
@@ -1040,7 +1040,7 @@
             "intended_value": 144.394389711,
             "key": "startup.startupAcceleration0",
             "q": 15,
-            "scale": 958.737992429,
+            "scale": 1054.61179167,
             "units": "rad/s^2"
         },
         {
@@ -1049,7 +1049,7 @@
             "intended_value": 721.971948554,
             "key": "startup.startupAcceleration1",
             "q": 15,
-            "scale": 958.737992429,
+            "scale": 1054.61179167,
             "units": "rad/s^2"
         },
         {
@@ -1076,7 +1076,7 @@
             "intended_value": 0.0885556527518,
             "key": "startup.startupDampingGain",
             "q": 8,
-            "scale": 0.0140056349921,
+            "scale": 0.0127323954474,
             "units": "A/(rad/s)"
         },
         {
@@ -1098,16 +1098,16 @@
         {
             "define_name": "STARTUP_DAMPING_THRESHOLD",
             "description": "threshold velocity for damping",
-            "intended_value": 108.908545324,
+            "intended_value": 119.799399857,
             "key": "startup.startupDampingThreshold",
             "q": 15,
-            "scale": 3141.59265359,
+            "scale": 3455.75191895,
             "units": "rad/s"
         },
         {
             "define_name": "STARTUP_DELTA_T_FACTOR",
             "description": null,
-            "intended_value": 9830,
+            "intended_value": 10813,
             "key": "startup.startupDeltaTFactor",
             "units": null
         },
@@ -1169,7 +1169,7 @@
             "intended_value": 19.5312437912,
             "key": "startup.weathervane.frequency",
             "q": 15,
-            "scale": 9424.77796077,
+            "scale": 10367.2557568,
             "units": "rad/s elec"
         },
         {

@@ -113,23 +113,23 @@
   <item>
     <key>omega_m_max</key>
     <description>maximum velocity</description>
+    <value>2513.2741228718346</value>
+    <units>rad/s</units>
+    <altunit><value>24000.00000068597</value><units>RPM</units></altunit>
+  </item>
+  <item>
+    <key>omega_m1</key>
+    <description>nominal (base) velocity</description>
     <value>2303.834612632515</value>
     <units>rad/s</units>
     <altunit><value>22000.000000628805</value><units>RPM</units></altunit>
   </item>
   <item>
-    <key>omega_m1</key>
-    <description>nominal (base) velocity</description>
-    <value>2094.3951023931954</value>
-    <units>rad/s</units>
-    <altunit><value>20000.000000571641</value><units>RPM</units></altunit>
-  </item>
-  <item>
     <key>omega_e1</key>
     <description>nominal electrical frequency</description>
-    <value>6283.185307179587</value>
+    <value>6911.503837897545</value>
     <units>rad/s</units>
-    <altunit><value>60000.00000171493</value><units>RPM</units></altunit>
+    <altunit><value>66000.000001886416</value><units>RPM</units></altunit>
   </item>
   <item>
     <key>I1</key>
@@ -140,13 +140,13 @@
   <item>
     <key>V1</key>
     <description>nominal voltage</description>
-    <value>11.790210628596363</value>
+    <value>12.969231691455999</value>
     <units>V line-neutral</units>
   </item>
   <item>
     <key>V1ll</key>
     <description>nominal voltage</description>
-    <value>20.42124384066749</value>
+    <value>22.46336822473424</value>
     <units>V line-line</units>
   </item>
   <item>
@@ -158,7 +158,7 @@
   <item>
     <key>P1</key>
     <description>rated power</description>
-    <value>194.53847537183998</value>
+    <value>213.992322909024</value>
     <units>W</units>
   </item>
 </motor>
