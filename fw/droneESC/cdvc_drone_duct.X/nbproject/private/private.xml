@@ -12,20 +12,6 @@
             <file>file:/C:/___data/_GIT/balancing_arm/fw/droneESC/cdvc_drone_duct.X/mcc_generated_files/motorBench/foc.c</file>
             <file>file:/C:/___data/_GIT/balancing_arm/fw/droneESC/cdvc_drone_duct.X/mcc_generated_files/motorBench/isr.c</file>
         </group>
-        <group name="balancing_arm">
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct.X/mcc_generated_files/opa/src/opa1.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct.X/arm_can.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct.X/mcc_generated_files/uart/uart3.h</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct.X/mcc_generated_files/motorBench/mcapi.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct.X/main.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct.X/mcc_generated_files/mcp802x/src/mcp8021.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct.X/mcc_generated_files/motorBench/diagnostics.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct.X/mcc_generated_files/can/src/can1.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct.X/mcc_generated_files/motorBench/isr.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct.X/arm_can.h</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct.X/mcc_generated_files/system/src/system.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct.X/mcc_generated_files/uart/src/uart3.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct.X/mcc_generated_files/motorBench/monitor.c</file>
-        </group>
+        <group name="balancing_arm"/>
     </open-files>
 </project-private>

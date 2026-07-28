@@ -327,7 +327,7 @@
         <targetDevice>dsPIC33CDVC256MP506</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>PK5Tool</platformTool>
         <languageToolchain>XCDSC</languageToolchain>
         <languageToolchainVersion>3.31.01</languageToolchainVersion>
         <platform>3</platform>
@@ -365,6 +365,7 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <C30>
+        <property key="appendMe" value=""/>
         <property key="cast-align" value="false"/>
         <property key="code-model" value="large-code"/>
         <property key="const-model" value="default"/>
@@ -402,7 +403,7 @@
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros" value=""/>
-        <property key="scalar-model" value="large-scalar"/>
+        <property key="scalar-model" value="small-scalar"/>
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
       </C30>
@@ -479,6 +480,7 @@
         <property key="warn-section-align" value="false"/>
       </C30-LD>
       <C30Global>
+        <property key="appendMe" value=""/>
         <property key="combine-sourcefiles" value="false"/>
         <property key="common-include-directories"
                   value="mcc_generated_files;mcc_generated_files/motorBench;mcc_generated_files/motorBench/library/mc-library;mcc_generated_files/motorBench/library/x2cscope"/>

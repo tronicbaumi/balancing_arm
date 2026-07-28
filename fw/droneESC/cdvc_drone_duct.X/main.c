@@ -21,6 +21,7 @@
 #include "mcc_generated_files/motorBench/mcaf_main.h"
 #include "mcc_generated_files/system/system.h"
 #include "arm_can.h"
+#include "system/pins.h"
 #include <xc.h>
 
 /*
@@ -38,5 +39,6 @@ int main(void)
     {
         MCAF_MainLoop();
         ARM_CAN_Tasks();    /* update arm_angle from received CAN messages */
+        CAN_STBY_GetValue();
     }
 }

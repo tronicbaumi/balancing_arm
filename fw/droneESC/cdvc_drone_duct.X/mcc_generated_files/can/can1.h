@@ -118,16 +118,6 @@ bool CAN1_IsBusOff(void);
 void CAN1_Sleep(void);
 
 /**
- * @ingroup  candriver
- * @brief    This routine is used to implement the tasks for polled implementations
- * @pre      CAN1_Initialize() function should have been 
- *           called before calling this function. 
- * @param    none
- * @return   none  
- */
-void CAN1_Tasks(void);
-
-/**
  * @ingroup    candriver
  * @brief      This function can be used to override default callback and to define 
  *             custom callback for \ref CAN1_InvalidMessageCallback.

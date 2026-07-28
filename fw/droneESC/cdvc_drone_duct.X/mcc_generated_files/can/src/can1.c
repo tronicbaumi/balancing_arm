@@ -86,7 +86,7 @@ const struct CAN_INTERFACE CAN1 = {
     .SystemErrorCallbackRegister = &CAN1_SystemErrorCallbackRegister,
     .TxAttemptCallbackRegister = NULL,
     .RxBufferOverFlowCallbackRegister = NULL,
-    .Tasks = CAN1_Tasks
+    .Tasks = NULL
 };
 
 // Section: Private Variable Definitions
@@ -138,6 +138,16 @@ static void CAN1_ErrorNotificationEnable(void)
     CAN1_BusErrorCallbackRegister(&CAN1_BusErrorCallback);
     CAN1_ModeChangeCallbackRegister(&CAN1_ModeChangeCallback);
     CAN1_SystemErrorCallbackRegister(&CAN1_SystemErrorCallback);
+
+    // Clear the interrupt flags
+    IFS1bits.C1IF = 0; // CAN Info Interrupt flag
+    
+    // IVMIF disabled; WAKIF disabled; CERRIF disabled; SERRIF disabled; TBCIF disabled; MODIF disabled; 
+    C1INTL = 0x0U;
+    // IVMIE enabled; TEFIE disabled; RXOVIE enabled; RXIE disabled; WAKIE enabled; TXIE disabled; CERRIE enabled; SERRIE enabled; MODIE enabled; TXATIE enabled; TBCIE disabled; 
+    C1INTH = 0xFC08U;
+
+    IEC1bits.C1IE = 1; // CAN Info Interrupt Enable bit   
 }
 
 // Section: Driver Interface Function Definitions
@@ -184,6 +194,15 @@ void CAN1_Deinitialize(void)
         C1NBTCFGH = 0x3E;
         C1NBTCFGL = 0xF0F;
 
+        /* CAN Error Notification */
+        // Clear the interrupt flags
+        IFS1bits.C1IF = 0; // CAN Info Interrupt flag
+        // IVMIF disabled; WAKIF disabled; CERRIF disabled; SERRIF disabled; TBCIF disabled; MODIF disabled; 
+        C1INTL = 0x0;
+        // IVMIE enabled; TEFIE disabled; RXOVIE enabled; RXIE disabled; WAKIE enabled; TXIE disabled; CERRIE enabled; SERRIE enabled; MODIE enabled; TXATIE enabled; TBCIE disabled; 
+        C1INTH = 0x0;
+
+        IEC1bits.C1IE = 0; // CAN Info Interrupt Enable bit   
     }
     
     /* Disable the CAN1 module */
@@ -232,8 +251,6 @@ void CAN1_Sleep(void)
     C1INTLbits.WAKIF = 0;
     C1INTHbits.WAKIE = 1;
     
-    // CAN Info Interrupt Enable bit
-    IEC1bits.C1IE = 1;  
     
     /* put the module in disable mode */
    (void)CAN1_OperationModeSet(CAN_DISABLE_MODE);
@@ -314,22 +331,6 @@ void __attribute__ ((weak)) CAN1_SystemErrorCallback ( void )
 */
 void __attribute__((__interrupt__, no_auto_psv)) _C1Interrupt(void)
 {
-    // Bus Wake-up Activity Interrupt 
-    if(1 == C1INTLbits.WAKIF)
-    {
-        if(CAN1_BusWakeUpActivityHandler != NULL)
-        {
-            CAN1_BusWakeUpActivityHandler();
-        }
-        
-        C1INTLbits.WAKIF = 0;
-    }
-    
-    IFS1bits.C1IF = 0;
-}
-
-void CAN1_Tasks(void)
-{
     if(1 == C1INTLbits.IVMIF)
     {
         if(CAN1_InvalidMessageHandler != NULL)
@@ -338,6 +339,16 @@ void CAN1_Tasks(void)
         }
        
         C1INTLbits.IVMIF = 0;
+    }
+    
+    if(1 == C1INTLbits.WAKIF)
+    {
+        if(CAN1_BusWakeUpActivityHandler != NULL)
+        {
+            CAN1_BusWakeUpActivityHandler();
+        }
+       
+        C1INTLbits.WAKIF = 0;
     }
     
     if(1 == C1INTLbits.CERRIF)
@@ -370,6 +381,7 @@ void CAN1_Tasks(void)
         C1INTLbits.SERRIF = 0;
     }
     
+    IFS1bits.C1IF = 0;
 }
 
 /**

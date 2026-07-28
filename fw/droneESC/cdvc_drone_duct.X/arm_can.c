@@ -14,6 +14,7 @@
 #include <xc.h>
 #include "arm_can.h"
 #include "mcc_generated_files/can/can1.h"
+#include "mcc_generated_files/system/pins.h"
 
 volatile uint16_t arm_angle = 0;
 
@@ -44,6 +45,11 @@ void ARM_CAN_Initialize(void)
      * CAN 2.0 mode with no receive FIFO. Re-enter configuration mode to add a
      * receive FIFO and an acceptance filter for the selected node, then resume
      * normal operation. */
+  
+    // ChB
+    CAN_STBY_SetLow();
+    //LATCbits.LATC11 = 0;  // TX pin LOW
+    
     if (CAN_OP_MODE_REQUEST_SUCCESS ==
             CAN1_OperationModeSet(CAN_CONFIGURATION_MODE))
     {
@@ -75,6 +81,11 @@ void ARM_CAN_Initialize(void)
         /* Resume normal CAN 2.0 operation. */
         (void) CAN1_OperationModeSet(CAN_NORMAL_2_0_MODE);
     }
+    
+    // ChB
+    CAN_STBY_SetLow();
+   // LATCbits.LATC11 = 0;  // TX pin LOW
+    
 }
 
 void ARM_CAN_Tasks(void)

@@ -2,12 +2,12 @@
 
 manifest_file_version: 1.0.0
 project: cdvc_drone_duct
-creation_date: 2026-07-22T12:39:11.297+02:00[Europe/Berlin]
+creation_date: 2026-07-23T13:21:30.025+02:00[Europe/Berlin]
 operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.30
 device_name: dsPIC33CDVC256MP506
-compiler: XCDSC 4.00.00
+compiler: XCDSC 3.31.01
 mcc_version: 5.7.0
 mcc_core_version: 5.9.0
 content_manager_version: 7.0.0
