@@ -1,4 +1,0 @@
-ERROR:root:Expecting only 2 bytes from LNET, but got 3
-ERROR:root:cannot convert 'NoneType' object to bytes
-ERROR:root:Expecting only 2 bytes from LNET, but got 3
-ERROR:root:cannot convert 'NoneType' object to bytes
