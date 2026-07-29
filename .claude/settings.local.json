@@ -7,7 +7,9 @@
       "WebFetch(domain:www.microchip.com)",
       "mcp__mchp_docs__get_example_projects",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:ww1.microchip.com)"
+      "WebFetch(domain:ww1.microchip.com)",
+      "Bash(git *)",
+      "Bash(python3 -c \"import json,sys; d=json.load\\(sys.stdin\\); print\\(json.dumps\\({k:d[k] for k in list\\(d.keys\\(\\)\\)[:10]}, indent=2\\)\\)\")"
     ]
   }
 }
