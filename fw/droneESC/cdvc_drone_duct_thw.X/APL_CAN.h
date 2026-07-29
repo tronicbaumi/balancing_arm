@@ -20,7 +20,7 @@
  * Node selection: set to 1 to receive node 1 (CAN ID 0x001),
  *                 set to 2 to receive node 2 (CAN ID 0x002).
  * ------------------------------------------------------------------------- */
-#define ARM_CAN_NODE    1
+#define ARM_CAN_NODE    2
 
 #if (ARM_CAN_NODE == 1)
     #define ARM_CAN_RX_ID   0x001U

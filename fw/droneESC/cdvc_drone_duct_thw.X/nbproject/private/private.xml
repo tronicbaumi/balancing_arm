@@ -3,18 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="balancing_arm">
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct_thw.X/mcc_generated_files/system/src/system.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct_thw.X/mcc_generated_files/can/src/can1.c</file>
             <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct_thw.X/APL_CAN.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct_thw.X/mcc_generated_files/motorBench/mcaf_main.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct_thw.X/mcc_generated_files/system/src/pins.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct_thw.X/arm_can.h</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct_thw.X/mcc_generated_files/motorBench/system_state.h</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct_thw.X/main.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct_thw.X/mcc_generated_files/motorBench/ui.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct_thw.X/mcc_generated_files/motorBench/mcapi.h</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct_thw.X/mcc_generated_files/uart/src/uart2.c</file>
-            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct_thw.X/mcc_generated_files/motorBench/util.h</file>
+            <file>file:/C:/_data/github/balancing_arm/fw/droneESC/cdvc_drone_duct_thw.X/APL_CAN.h</file>
         </group>
     </open-files>
 </project-private>
