@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Program Files/Microchip/xc16/v2.10/support/dsPIC33C/h/**)"
+    ]
+  }
+}
