@@ -1,0 +1,18 @@
+# Dependencies for claude10.py
+# (hardware-SPI pose transmitter, CE0 / 0-255 unsigned scaling)
+
+# -- Core: pose estimation + vision -----------------------------------
+ultralytics          # YOLO11 pose model (yolo11n-pose.pt)
+opencv-python        # cv2 - frame display, overlays
+numpy                # angle maths, interpolation
+
+# -- Raspberry Pi camera ----------------------------------------------
+# NOTE: On Raspberry Pi OS, install picamera2 via apt, NOT pip - it
+# depends on libcamera, which pip cannot provide:
+#     sudo apt install -y python3-picamera2
+# If your venv was created with --system-site-packages it is already
+# visible and this line can be omitted.
+picamera2
+
+# -- Hardware SPI transmit --------------------------------------------
+spidev               # /dev/spidev0.0 kernel-driver access
