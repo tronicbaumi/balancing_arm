@@ -1,23 +1,23 @@
 # The following variables contains the files used by the different stages of the build process.
-set(dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_assemble
+set(dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_FILE_TYPE_assemble
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../mcc_generated_files/system/src/dmt_asm.s"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../mcc_generated_files/system/src/where_was_i.s")
-set_source_files_properties(${dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_assemble} PROPERTIES LANGUAGE ASM)
+set_source_files_properties(${dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_FILE_TYPE_assemble} PROPERTIES LANGUAGE ASM)
 
 # For assembly files, add "." to the include path for each file so that .include with a relative path works
-foreach(source_file ${dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_assemble})
+foreach(source_file ${dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_FILE_TYPE_assemble})
         set_source_files_properties(${source_file} PROPERTIES INCLUDE_DIRECTORIES "$<PATH:NORMAL_PATH,$<PATH:REMOVE_FILENAME,${source_file}>>")
 endforeach()
 
-set(dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_assemblePreproc)
-set_source_files_properties(${dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_assemblePreproc} PROPERTIES LANGUAGE ASM)
+set(dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_FILE_TYPE_assemblePreproc)
+set_source_files_properties(${dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_FILE_TYPE_assemblePreproc} PROPERTIES LANGUAGE ASM)
 
 # For assembly files, add "." to the include path for each file so that .include with a relative path works
-foreach(source_file ${dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_assemblePreproc})
+foreach(source_file ${dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_FILE_TYPE_assemblePreproc})
         set_source_files_properties(${source_file} PROPERTIES INCLUDE_DIRECTORIES "$<PATH:NORMAL_PATH,$<PATH:REMOVE_FILENAME,${source_file}>>")
 endforeach()
 
-set(dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_compile
+set(dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_FILE_TYPE_compile
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../application/application.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../bsp/led.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../bsp/pot.c"
@@ -36,11 +36,11 @@ set(dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_compil
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../mcc_generated_files/timer/src/sccp1.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../mcc_generated_files/timer/src/tmr1.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/../../../mcc_generated_files/uart/src/uart1.c")
-set_source_files_properties(${dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_compile} PROPERTIES LANGUAGE C)
-set(dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_compile_cpp)
-set_source_files_properties(${dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_compile_cpp} PROPERTIES LANGUAGE CXX)
-set(dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_link)
-set(dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_bin2hex)
+set_source_files_properties(${dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_FILE_TYPE_compile} PROPERTIES LANGUAGE C)
+set(dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_FILE_TYPE_compile_cpp)
+set_source_files_properties(${dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_FILE_TYPE_compile_cpp} PROPERTIES LANGUAGE CXX)
+set(dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_FILE_TYPE_link)
+set(dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_FILE_TYPE_bin2hex)
 set(dspic33c_touch_can_lin_curiosity_oob_default_image_name "default-production.elf")
 set(dspic33c_touch_can_lin_curiosity_oob_default_image_base_name "default-production")
 

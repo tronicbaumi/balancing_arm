@@ -2,37 +2,33 @@
 
 set(PACK_REPO_PATH "C:/Users/M91110/.mchp_packs" CACHE PATH "Path to the root of a pack repository.")
 
-function(dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_assemble_rule target)
+function(dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_assemble_rule target)
     set(options
         "-g"
         "-mcpu=33CK1024MP710"
         "-Wa,--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUGGER_PKOB4=1,--no-relax"
-        "-mdfp=${PACK_REPO_PATH}/Microchip/dsPIC33CK-MP_DFP/1.15.423/xc16")
+        "-mdfp=${PACK_REPO_PATH}/Microchip/dsPIC33CK-MP_DFP/1.16.521/xc16")
     list(REMOVE_ITEM options "")
     target_compile_options(${target} PRIVATE "${options}")
     target_compile_definitions(${target}
         PRIVATE "__MPLAB_DEBUGGER_PKOB4=1"
         PRIVATE "XPRJ_default=default")
-    target_include_directories(${target} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../../..")
 endfunction()
-function(dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_assemblePreproc_rule target)
+function(dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_assemblePreproc_rule target)
     set(options
         "-x"
         "assembler-with-cpp"
         "-g"
         "-mcpu=33CK1024MP710"
         "-Wa,--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUGGER_PKOB4=1,--no-relax"
-        "-mdfp=${PACK_REPO_PATH}/Microchip/dsPIC33CK-MP_DFP/1.15.423/xc16")
+        "-mdfp=${PACK_REPO_PATH}/Microchip/dsPIC33CK-MP_DFP/1.16.521/xc16")
     list(REMOVE_ITEM options "")
     target_compile_options(${target} PRIVATE "${options}")
     target_compile_definitions(${target}
         PRIVATE "__MPLAB_DEBUGGER_PKOB4=1"
         PRIVATE "XPRJ_default=default")
-    target_include_directories(${target}
-        PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../../.."
-        PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../../..")
 endfunction()
-function(dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_compile_rule target)
+function(dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_compile_rule target)
     set(options
         "-g"
         "-mcpu=33CK1024MP710"
@@ -40,15 +36,14 @@ function(dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_compile_rul
         "-msmart-io=1"
         "-Wall"
         "-msfr-warn=off"
-        "-mdfp=${PACK_REPO_PATH}/Microchip/dsPIC33CK-MP_DFP/1.15.423/xc16")
+        "-mdfp=${PACK_REPO_PATH}/Microchip/dsPIC33CK-MP_DFP/1.16.521/xc16")
     list(REMOVE_ITEM options "")
     target_compile_options(${target} PRIVATE "${options}")
     target_compile_definitions(${target}
         PRIVATE "__MPLAB_DEBUGGER_PKOB4=1"
         PRIVATE "XPRJ_default=default")
-    target_include_directories(${target} PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/../../..")
 endfunction()
-function(dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_compile_cpp_rule target)
+function(dspic33c_touch_can_lin_curiosity_oob_default_toolchain_XC_DSC_4_00_00_compile_cpp_rule target)
     set(options
         "-g"
         "${CC_PRE}"
@@ -58,7 +53,7 @@ function(dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_compile_cpp
         "-fno-check-new"
         "-fenforce-eh-specs"
         "-fno-common"
-        "-mdfp=${PACK_REPO_PATH}/Microchip/dsPIC33CK-MP_DFP/1.15.423/xc16")
+        "-mdfp=${PACK_REPO_PATH}/Microchip/dsPIC33CK-MP_DFP/1.16.521/xc16")
     list(REMOVE_ITEM options "")
     target_compile_options(${target} PRIVATE "${options}")
     target_compile_definitions(${target} PRIVATE "XPRJ_default=default")
@@ -67,7 +62,7 @@ function(dspic33c_touch_can_lin_curiosity_oob_default_dependentObject_rule targe
     set(options
         "-c"
         "-mcpu=33CK1024MP710"
-        "-mdfp=${PACK_REPO_PATH}/Microchip/dsPIC33CK-MP_DFP/1.15.423/xc16")
+        "-mdfp=${PACK_REPO_PATH}/Microchip/dsPIC33CK-MP_DFP/1.16.521/xc16")
     list(REMOVE_ITEM options "")
     target_compile_options(${target} PRIVATE "${options}")
 endfunction()
@@ -75,8 +70,8 @@ function(dspic33c_touch_can_lin_curiosity_oob_default_link_rule target)
     set(options
         "-g"
         "-mcpu=33CK1024MP710"
-        "-Wl,--script=p33CK1024MP710.gld,--local-stack,--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUGGER_PKOB4=1,--stack=16,--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--library-path=${CMAKE_CURRENT_SOURCE_DIR}/../../..,--no-force-link,--smart-io,--report-mem,--memorysummary,memoryfile.xml"
-        "-mdfp=${PACK_REPO_PATH}/Microchip/dsPIC33CK-MP_DFP/1.15.423/xc16")
+        "-Wl,--script=p33CK1024MP710.gld,--local-stack,--defsym=__MPLAB_BUILD=1,--defsym=__MPLAB_DEBUGGER_PKOB4=1,--stack=16,--check-sections,--data-init,--pack-data,--handles,--isr,--no-gc-sections,--fill-upper=0,--stackguard=16,--no-force-link,--smart-io,--report-mem,--memorysummary,memoryfile.xml"
+        "-mdfp=${PACK_REPO_PATH}/Microchip/dsPIC33CK-MP_DFP/1.16.521/xc16")
     list(REMOVE_ITEM options "")
     target_link_options(${target} PRIVATE "${options}")
     target_compile_definitions(${target}
@@ -86,7 +81,7 @@ endfunction()
 function(dspic33c_touch_can_lin_curiosity_oob_default_bin2hex_rule target)
     add_custom_target(
         dspic33c_touch_can_lin_curiosity_oob_default_Bin2Hex ALL
-        COMMAND ${MP_BIN2HEX} ${dspic33c_touch_can_lin_curiosity_oob_default_image_name} -a -mdfp=${PACK_REPO_PATH}/Microchip/dsPIC33CK-MP_DFP/1.15.423/xc16
+        COMMAND ${MP_BIN2HEX} ${dspic33c_touch_can_lin_curiosity_oob_default_image_name} -a -mdfp=${PACK_REPO_PATH}/Microchip/dsPIC33CK-MP_DFP/1.16.521/xc16
         WORKING_DIRECTORY ${dspic33c_touch_can_lin_curiosity_oob_default_output_dir}
         BYPRODUCTS "${dspic33c_touch_can_lin_curiosity_oob_default_output_dir}/${dspic33c_touch_can_lin_curiosity_oob_default_image_base_name}.hex"
         COMMENT "Convert build file to .hex")

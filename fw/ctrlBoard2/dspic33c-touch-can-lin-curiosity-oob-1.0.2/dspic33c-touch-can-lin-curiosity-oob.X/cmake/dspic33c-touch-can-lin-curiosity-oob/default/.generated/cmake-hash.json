@@ -1,7 +1,7 @@
 {
     "hashFileVersion": "1.1.0",
-    "projectFileHash": "acd8a5b1e8601ca1a95548c6f1f63d0d6eb6bb23711e1ef101ca653909d072cc",
-    "cmakeFilesHash": "95304be3787d8e747d4c451f2a40a4d7ea73dd660126cacd11ae75142879af9e",
-    "cmakerVersion": "4.3.0",
-    "workspacePath": "c:/_data/github/balancing_arm/fw/ctrlboard2/dspic33c-touch-can-lin-curiosity-oob-1.0.2/dspic33c-touch-can-lin-curiosity-oob.x"
+    "projectFileHash": "2d39f18de8044044e1112610123be60fa1a929b5916ebdb0237874476b879a09",
+    "cmakeFilesHash": "af1268a598f094935729647e1a36033acacb74b169914405dc7a58dc783cc9ce",
+    "cmakerVersion": "5.0.2",
+    "workspacePath": "c:/_data/github/balancing_arm2/fw/ctrlboard2/dspic33c-touch-can-lin-curiosity-oob-1.0.2/dspic33c-touch-can-lin-curiosity-oob.x"
 }
