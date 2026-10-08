@@ -1,6 +1,0 @@
-C:/___data/_GIT/balancing_arm/fw/ctrlBoard/dspic33can/_build/dspic33c-touch-can-lin-curiosity-oob/default/CMakeFiles/dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_assemble.dir
-C:/___data/_GIT/balancing_arm/fw/ctrlBoard/dspic33can/_build/dspic33c-touch-can-lin-curiosity-oob/default/CMakeFiles/dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_compile.dir
-C:/___data/_GIT/balancing_arm/fw/ctrlBoard/dspic33can/_build/dspic33c-touch-can-lin-curiosity-oob/default/CMakeFiles/dspic33c_touch_can_lin_curiosity_oob_default_image_59T5b1L0.dir
-C:/___data/_GIT/balancing_arm/fw/ctrlBoard/dspic33can/_build/dspic33c-touch-can-lin-curiosity-oob/default/CMakeFiles/dspic33c_touch_can_lin_curiosity_oob_default_Bin2Hex.dir
-C:/___data/_GIT/balancing_arm/fw/ctrlBoard/dspic33can/_build/dspic33c-touch-can-lin-curiosity-oob/default/CMakeFiles/edit_cache.dir
-C:/___data/_GIT/balancing_arm/fw/ctrlBoard/dspic33can/_build/dspic33c-touch-can-lin-curiosity-oob/default/CMakeFiles/rebuild_cache.dir
