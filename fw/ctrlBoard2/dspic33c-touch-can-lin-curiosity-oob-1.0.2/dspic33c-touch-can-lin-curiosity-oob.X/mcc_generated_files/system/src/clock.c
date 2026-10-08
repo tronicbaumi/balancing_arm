@@ -96,7 +96,7 @@ void CLOCK_Initialize(void)
    PMD8 = 0x0U;
     /*  
        Input frequency                               :  8.00 MHz
-       Clock source                                  :  FRC Oscillator with PLL
+       Clock source                                  :  External Oscillator with PLL
        System frequency (Fosc)                       :  200.00 MHz [(8.00 MHz / 1) * 50 / 1 / 2 = 200.00 MHz]
        PLL VCO frequency (Fvco)                      :  400.00 MHz [(8.00 MHz / 1) * 50 = 400.00 MHz]
        PLL output frequency (Fpllo)                  :  400.00 MHz [(8.00 MHz / 1) * 50 / 1 = 400.00 MHz]
@@ -107,8 +107,8 @@ void CLOCK_Initialize(void)
        Auxiliary clock input frequency               :  8.00 MHz
        Auxiliary clock PLL output frequency (AFpllo) :  8.00 MHz
     */
-    // CF no clock failure; NOSC FRCPLL; CLKLOCK unlocked; OSWEN Switch is Complete; 
-    __builtin_write_OSCCONH((uint8_t) (0x01));
+    // CF no clock failure; NOSC PRIPLL; CLKLOCK unlocked; OSWEN Switch is Complete; 
+    __builtin_write_OSCCONH((uint8_t) (0x03));
     __builtin_write_OSCCONL((uint8_t) (0x01));
     // Wait for Clock switch to occur
     while (OSCCONbits.OSWEN != 0){}

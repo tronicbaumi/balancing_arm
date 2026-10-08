@@ -53,32 +53,32 @@ endif()
 
 
 # Main target for this project
-add_executable(dspic33c_touch_can_lin_curiosity_oob_default_image_HGhO4qQ4 ${dspic33c_touch_can_lin_curiosity_oob_default_library_list})
+add_executable(dspic33c_touch_can_lin_curiosity_oob_default_image_Q_kyV7Fx ${dspic33c_touch_can_lin_curiosity_oob_default_library_list})
 
 if(NOT CMAKE_HOST_WIN32)
-    set_target_properties(dspic33c_touch_can_lin_curiosity_oob_default_image_HGhO4qQ4 PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${dspic33c_touch_can_lin_curiosity_oob_default_output_dir}")
+    set_target_properties(dspic33c_touch_can_lin_curiosity_oob_default_image_Q_kyV7Fx PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${dspic33c_touch_can_lin_curiosity_oob_default_output_dir}")
 endif()
-set_target_properties(dspic33c_touch_can_lin_curiosity_oob_default_image_HGhO4qQ4 PROPERTIES
+set_target_properties(dspic33c_touch_can_lin_curiosity_oob_default_image_Q_kyV7Fx PROPERTIES
     OUTPUT_NAME "default"
     SUFFIX ".elf")
-target_link_libraries(dspic33c_touch_can_lin_curiosity_oob_default_image_HGhO4qQ4 PRIVATE ${dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_link})
-
+target_link_libraries(dspic33c_touch_can_lin_curiosity_oob_default_image_Q_kyV7Fx PRIVATE ${dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_FILE_TYPE_link})
 # Add the link options from the rule file.
-dspic33c_touch_can_lin_curiosity_oob_default_link_rule( dspic33c_touch_can_lin_curiosity_oob_default_image_HGhO4qQ4)
+dspic33c_touch_can_lin_curiosity_oob_default_link_rule( dspic33c_touch_can_lin_curiosity_oob_default_image_Q_kyV7Fx)
 
 # Call bin2hex function from the rule file
-dspic33c_touch_can_lin_curiosity_oob_default_bin2hex_rule(dspic33c_touch_can_lin_curiosity_oob_default_image_HGhO4qQ4)
+dspic33c_touch_can_lin_curiosity_oob_default_bin2hex_rule(dspic33c_touch_can_lin_curiosity_oob_default_image_Q_kyV7Fx)
 if(CMAKE_HOST_WIN32)
     add_custom_command(
-        TARGET dspic33c_touch_can_lin_curiosity_oob_default_image_HGhO4qQ4
+        TARGET dspic33c_touch_can_lin_curiosity_oob_default_image_Q_kyV7Fx
         POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E make_directory ${dspic33c_touch_can_lin_curiosity_oob_default_output_dir}
-        COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:dspic33c_touch_can_lin_curiosity_oob_default_image_HGhO4qQ4> ${dspic33c_touch_can_lin_curiosity_oob_default_output_dir}/${dspic33c_touch_can_lin_curiosity_oob_default_original_image_name}
+        COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:dspic33c_touch_can_lin_curiosity_oob_default_image_Q_kyV7Fx> ${dspic33c_touch_can_lin_curiosity_oob_default_output_dir}/${dspic33c_touch_can_lin_curiosity_oob_default_original_image_name}
         BYPRODUCTS ${dspic33c_touch_can_lin_curiosity_oob_default_output_dir}/${dspic33c_touch_can_lin_curiosity_oob_default_original_image_name}
         COMMENT "Copying elf to out location")
     set_property(
-        TARGET dspic33c_touch_can_lin_curiosity_oob_default_image_HGhO4qQ4
+        TARGET dspic33c_touch_can_lin_curiosity_oob_default_image_Q_kyV7Fx
         APPEND PROPERTY ADDITIONAL_CLEAN_FILES
         ${dspic33c_touch_can_lin_curiosity_oob_default_output_dir}/${dspic33c_touch_can_lin_curiosity_oob_default_original_image_name})
 endif()
+
 

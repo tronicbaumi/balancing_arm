@@ -15,7 +15,7 @@
 */
 
 /*
-© [2026] Microchip Technology Inc. and its subsidiaries.
+ï¿½ [2026] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -68,11 +68,11 @@ const struct CAN_INTERFACE CAN1 = {
     .OperationModeGet = CAN1_OperationModeGet,
     .IsBusOff = CAN1_IsBusOff,
     .SleepMode = CAN1_Sleep,
-    .Transmit = NULL,
-    .TransmitFIFOStatusGet = NULL,
-    .IsTxErrorActive = NULL,
-    .IsTxErrorPassive = NULL,
-    .IsTxErrorWarning = NULL,    
+    .Transmit = CAN1_Transmit,
+    .TransmitFIFOStatusGet = CAN1_TransmitFIFOStatusGet,
+    .IsTxErrorActive = CAN1_IsTxErrorActive,
+    .IsTxErrorPassive = CAN1_IsTxErrorPassive,
+    .IsTxErrorWarning = CAN1_IsTxErrorWarning,
     .Receive = NULL,
     .ReceiveMessageGet = NULL,
     .IsRxErrorPassive = NULL,
@@ -90,6 +90,10 @@ const struct CAN_INTERFACE CAN1 = {
 };
 
 // Section: Private Variable Definitions
+
+// TX FIFO 1 message RAM: 4 messages Ã— (T0 + T1 + 8 bytes data) = 64 bytes
+// PLSIZE=0 (8 bytes), FSIZE=3 (4 messages deep)
+static uint32_t can1_msg_ram[16U] __attribute__((aligned(4)));
 
 // CAN Default Callback Handler
 static void (*CAN1_InvalidMessageHandler)(void) = NULL;
@@ -172,7 +176,17 @@ void CAN1_Initialize(void)
         C1CONHbits.TXQEN = 0;
         
         /* configure CAN1 Bit rate settings */
-        CAN1_BitRateConfiguration();        
+        CAN1_BitRateConfiguration();
+
+        /* Configure FIFO 1 as TX FIFO: 4 messages deep, 8-byte payload, unlimited retransmit */
+        C1FIFOCON1Lbits.TXEN   = 1U;
+        C1FIFOCON1Hbits.FSIZE  = 3U;   // 4 message objects (FSIZE+1)
+        C1FIFOCON1Hbits.PLSIZE = 0U;   // 8-byte payload
+        C1FIFOCON1Hbits.TXAT   = 3U;   // unlimited TX attempts
+
+        /* Set FIFO base address to allocated message RAM */
+        C1FIFOBAL = (uint16_t)(uintptr_t)can1_msg_ram;
+        C1FIFOBAH = 0U;
 
         /* CAN Error Notification */
         CAN1_ErrorNotificationEnable();
@@ -382,6 +396,80 @@ void __attribute__((__interrupt__, no_auto_psv)) _C1Interrupt(void)
     }
     
     IFS1bits.C1IF = 0;
+}
+
+enum CAN_TX_MSG_REQUEST_STATUS CAN1_Transmit(const unsigned fifoChannel, struct CAN_MSG_OBJ *txCanMsg)
+{
+    volatile uint32_t *txMsgObj;
+    uint8_t dlcBytes;
+
+    (void)fifoChannel;  // only FIFO 1 is configured; caller passes 1
+
+    if (C1FIFOSTA1bits.TFNRFNIF == 0U)
+    {
+        return CAN_TX_MSG_REQUEST_FIFO_FULL;
+    }
+
+    // Hardware updates C1FIFOUA1L to point to the next available message object
+    txMsgObj = (volatile uint32_t *)(uintptr_t)C1FIFOUA1L;
+
+    // T0: pack message ID
+    if (txCanMsg->field.idType == CAN_FRAME_EXT)
+    {
+        // Extended: upper 11 bits (EID[28:18]) into T0[28:18], lower 18 bits into T0[17:0]
+        txMsgObj[0] = ((txCanMsg->msgId >> 18U) << CAN_MSG_OBJ_SID_SHIFT_POS) |
+                      (txCanMsg->msgId & 0x3FFFFU);
+    }
+    else
+    {
+        // Standard: SID[10:0] into T0[28:18]
+        txMsgObj[0] = (txCanMsg->msgId & CAN_STD_MSG_ID_MAX_SIZE) << CAN_MSG_OBJ_SID_SHIFT_POS;
+    }
+
+    // T1: control fields
+    txMsgObj[1] = ((uint32_t)txCanMsg->field.dlc       & CAN_MSG_OBJ_DLC_FIELD_SIZE) |
+                  ((uint32_t)txCanMsg->field.idType     << CAN_MSG_OBJ_ID_TYPE_SHIFT_POS) |
+                  ((uint32_t)txCanMsg->field.frameType  << CAN_MSG_OBJ_FRAME_TYPE_SHIFT_POS) |
+                  ((uint32_t)txCanMsg->field.brs        << CAN_MSG_OBJ_BRS_SHIFT_POS) |
+                  ((uint32_t)txCanMsg->field.formatType << CAN_MSG_OBJ_FORMAT_TYPE_SHIFT_POS);
+
+    // Payload (DLC enum values 0-8 map 1:1 to byte count for CAN 2.0)
+    dlcBytes = (uint8_t)txCanMsg->field.dlc;
+    if (dlcBytes > 8U)
+    {
+        dlcBytes = 8U;
+    }
+    if ((txCanMsg->data != NULL) && (dlcBytes > 0U))
+    {
+        memcpy((void *)&txMsgObj[2], txCanMsg->data, dlcBytes);
+    }
+
+    // Advance FIFO head and request transmission
+    C1FIFOCON1Lbits.UINC  = 1U;
+    C1FIFOCON1Lbits.TXREQ = 1U;
+
+    return CAN_TX_MSG_REQUEST_SUCCESS;
+}
+
+enum CAN_TX_FIFO_STATUS CAN1_TransmitFIFOStatusGet(const unsigned fifoChannel)
+{
+    (void)fifoChannel;
+    return (C1FIFOSTA1bits.TFNRFNIF != 0U) ? CAN_TX_FIFO_AVAILABLE : CAN_TX_FIFO_FULL;
+}
+
+bool CAN1_IsTxErrorActive(void)
+{
+    return (C1TRECHbits.TXWARN == 0U) && (C1TRECHbits.TXBP == 0U) && (C1TRECHbits.TXBO == 0U);
+}
+
+bool CAN1_IsTxErrorPassive(void)
+{
+    return (bool)C1TRECHbits.TXBP;
+}
+
+bool CAN1_IsTxErrorWarning(void)
+{
+    return (bool)C1TRECHbits.TXWARN;
 }
 
 /**

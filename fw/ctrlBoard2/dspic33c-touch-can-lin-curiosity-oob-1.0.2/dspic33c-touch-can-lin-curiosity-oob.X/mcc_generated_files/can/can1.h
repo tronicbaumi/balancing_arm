@@ -15,7 +15,7 @@
 */
 
 /*
-© [2026] Microchip Technology Inc. and its subsidiaries.
+ï¿½ [2026] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 
@@ -211,6 +211,42 @@ void CAN1_SystemErrorCallbackRegister(void (*handler)(void));
  * @return   none  
  */
 void CAN1_SystemErrorCallback(void);
+
+/**
+ * @ingroup    candriver
+ * @brief      Writes a CAN message object into TX FIFO 1 and requests transmission
+ * @param[in]  fifoChannel - TX FIFO channel number (pass 1 for FIFO 1)
+ * @param[in]  txCanMsg    - Pointer to the message object to transmit
+ * @return     CAN_TX_MSG_REQUEST_SUCCESS or CAN_TX_MSG_REQUEST_FIFO_FULL
+ */
+enum CAN_TX_MSG_REQUEST_STATUS CAN1_Transmit(const unsigned fifoChannel, struct CAN_MSG_OBJ *txCanMsg);
+
+/**
+ * @ingroup    candriver
+ * @brief      Returns the TX FIFO fill status
+ * @param[in]  fifoChannel - TX FIFO channel number (pass 1 for FIFO 1)
+ * @return     CAN_TX_FIFO_AVAILABLE or CAN_TX_FIFO_FULL
+ */
+enum CAN_TX_FIFO_STATUS CAN1_TransmitFIFOStatusGet(const unsigned fifoChannel);
+
+/**
+ * @ingroup  candriver
+ * @brief    Returns true when TX error count < 128 (active error state, no error)
+ */
+bool CAN1_IsTxErrorActive(void);
+
+/**
+ * @ingroup  candriver
+ * @brief    Returns true when TX error count >= 128 (error passive state)
+ */
+bool CAN1_IsTxErrorPassive(void);
+
+/**
+ * @ingroup  candriver
+ * @brief    Returns true when TX error count >= 96 (warning threshold)
+ */
+bool CAN1_IsTxErrorWarning(void);
+
 #endif  //_CAN1_H
 /**
  End of File

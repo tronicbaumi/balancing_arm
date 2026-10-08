@@ -1,4 +1,4 @@
-# Install script for directory: C:/_data/github/balancing_arm/fw/ctrlBoard2/dspic33c-touch-can-lin-curiosity-oob-1.0.2/dspic33c-touch-can-lin-curiosity-oob.X/cmake/dspic33c-touch-can-lin-curiosity-oob/default
+# Install script for directory: C:/_data/github/balancing_arm2/fw/ctrlBoard2/dspic33c-touch-can-lin-curiosity-oob-1.0.2/dspic33c-touch-can-lin-curiosity-oob.X/cmake/dspic33c-touch-can-lin-curiosity-oob/default
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,13 +34,13 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/Microchip/xc-dsc/v3.31.01/bin/xc-dsc-objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Program Files/Microchip/xc-dsc/v4.00/bin/xc-dsc-objdump.exe")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/_data/github/balancing_arm/fw/ctrlBoard2/dspic33c-touch-can-lin-curiosity-oob-1.0.2/dspic33c-touch-can-lin-curiosity-oob.X/_build/dspic33c-touch-can-lin-curiosity-oob/default/install_local_manifest.txt"
+  file(WRITE "C:/_data/github/balancing_arm2/fw/ctrlBoard2/dspic33c-touch-can-lin-curiosity-oob-1.0.2/dspic33c-touch-can-lin-curiosity-oob.X/_build/dspic33c-touch-can-lin-curiosity-oob/default/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
 if(CMAKE_INSTALL_COMPONENT)
@@ -56,6 +56,6 @@ else()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/_data/github/balancing_arm/fw/ctrlBoard2/dspic33c-touch-can-lin-curiosity-oob-1.0.2/dspic33c-touch-can-lin-curiosity-oob.X/_build/dspic33c-touch-can-lin-curiosity-oob/default/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "C:/_data/github/balancing_arm2/fw/ctrlBoard2/dspic33c-touch-can-lin-curiosity-oob-1.0.2/dspic33c-touch-can-lin-curiosity-oob.X/_build/dspic33c-touch-can-lin-curiosity-oob/default/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

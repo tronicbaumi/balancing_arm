@@ -20,14 +20,17 @@
  * Node selection: set to 1 to receive node 1 (CAN ID 0x001),
  *                 set to 2 to receive node 2 (CAN ID 0x002).
  * ------------------------------------------------------------------------- */
-#define ARM_CAN_NODE    2
+#define ARM_CAN_NODE    0
 
 #if (ARM_CAN_NODE == 1)
     #define ARM_CAN_RX_ID   0x001U
 #elif (ARM_CAN_NODE == 2)
     #define ARM_CAN_RX_ID   0x002U
+#elif (ARM_CAN_NODE == 0)
+    #define ARM_CAN_RX_ID   0x000U
+    #define ARM_SIDE    0x01U
 #else
-    #error "ARM_CAN_NODE must be 1 or 2"
+    #error "ARM_CAN_NODE must be 0,1 or 2"
 #endif
 
 /* Latest arm angle received over CAN from the selected node.

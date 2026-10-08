@@ -17,7 +17,7 @@
 rule ASM_COMPILER__dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_assemble_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}c:\PROGRA~1\MICROC~1\xc-dsc\V331~1.01\bin\XC40A4~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}c:\PROGRA~1\MICROC~1\xc-dsc\v4.00\bin\XC40A4~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -27,15 +27,15 @@ rule ASM_COMPILER__dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_a
 rule C_COMPILER__dspic33c_touch_can_lin_curiosity_oob_default_default_XC_DSC_compile_unscanned_
   depfile = $DEP_FILE
   deps = gcc
-  command = ${LAUNCHER}${CODE_CHECK}c:\PROGRA~1\MICROC~1\xc-dsc\V331~1.01\bin\XC40A4~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = ${LAUNCHER}${CODE_CHECK}c:\PROGRA~1\MICROC~1\xc-dsc\v4.00\bin\XC40A4~1.EXE $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
 #############################################
 # Rule for linking C executable.
 
-rule C_EXECUTABLE_LINKER__dspic33c_touch_can_lin_curiosity_oob_default_image_4OOTjINs_
-  command = cmd.exe /C "$PRE_LINK && c:\PROGRA~1\MICROC~1\xc-dsc\V331~1.01\bin\XC40A4~1.EXE $FLAGS $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE && $POST_BUILD"
+rule C_EXECUTABLE_LINKER__dspic33c_touch_can_lin_curiosity_oob_default_image_Uj99OWYm_
+  command = cmd.exe /C "$PRE_LINK && c:\PROGRA~1\MICROC~1\xc-dsc\v4.00\bin\XC40A4~1.EXE $FLAGS $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE && $POST_BUILD"
   description = Linking C executable $TARGET_FILE; Copying elf to out location
   rspfile = $RSP_FILE
   rspfile_content = $in $LINK_PATH $LINK_LIBRARIES
@@ -54,7 +54,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = C:\Users\M91110\.mplab\app-finder\apps\cmake\v4.3.3\cmake-4.3.3-windows-x86_64\bin\cmake.exe --regenerate-during-build -SC:\_data\github\balancing_arm\fw\ctrlBoard2\dspic33c-touch-can-lin-curiosity-oob-1.0.2\dspic33c-touch-can-lin-curiosity-oob.X\cmake\dspic33c-touch-can-lin-curiosity-oob\default.production -BC:\_data\github\balancing_arm\fw\ctrlBoard2\dspic33c-touch-can-lin-curiosity-oob-1.0.2\dspic33c-touch-can-lin-curiosity-oob.X\_build\dspic33c-touch-can-lin-curiosity-oob\default.production
+  command = C:\Users\M91110\.mplab\app-finder\apps\cmake\v4.3.3\cmake-4.3.3-windows-x86_64\bin\cmake.exe --regenerate-during-build -SC:\_data\github\balancing_arm2\fw\ctrlBoard2\dspic33c-touch-can-lin-curiosity-oob-1.0.2\dspic33c-touch-can-lin-curiosity-oob.X\cmake\dspic33c-touch-can-lin-curiosity-oob\default.production -BC:\_data\github\balancing_arm2\fw\ctrlBoard2\dspic33c-touch-can-lin-curiosity-oob-1.0.2\dspic33c-touch-can-lin-curiosity-oob.X\_build\dspic33c-touch-can-lin-curiosity-oob\default.production
   description = Re-running CMake...
   generator = 1
 

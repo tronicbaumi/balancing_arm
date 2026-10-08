@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "c:/Program Files/Microchip/xc-dsc/v3.31.01/bin/xc-dsc-gcc.exe")
+set(CMAKE_C_COMPILER "c:/Program Files/Microchip/xc-dsc/v4.00/bin/xc-dsc-gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "8.3.1")
@@ -24,11 +24,11 @@ set(CMAKE_C_COMPILER_ARCHITECTURE_ID "")
 
 
 
-set(CMAKE_AR "c:/Program Files/Microchip/xc-dsc/v3.31.01/bin/xc-dsc-ar.exe")
+set(CMAKE_AR "c:/Program Files/Microchip/xc-dsc/v4.00/bin/xc-dsc-ar.exe")
 set(CMAKE_C_COMPILER_AR "CMAKE_C_COMPILER_AR-NOTFOUND")
-set(CMAKE_RANLIB "C:/Program Files/Microchip/xc-dsc/v3.31.01/bin/xc-dsc-ranlib.exe")
+set(CMAKE_RANLIB "C:/Program Files/Microchip/xc-dsc/v4.00/bin/xc-dsc-ranlib.exe")
 set(CMAKE_C_COMPILER_RANLIB "CMAKE_C_COMPILER_RANLIB-NOTFOUND")
-set(CMAKE_LINKER "C:/Program Files/Microchip/xc-dsc/v3.31.01/bin/xc-dsc-ld.exe")
+set(CMAKE_LINKER "C:/Program Files/Microchip/xc-dsc/v4.00/bin/xc-dsc-ld.exe")
 set(CMAKE_LINKER_LINK "")
 set(CMAKE_LINKER_LLD "")
 set(CMAKE_C_COMPILER_LINKER "")

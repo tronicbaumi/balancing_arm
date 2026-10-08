@@ -57,7 +57,7 @@ void ARM_CAN_Tasks(void)
         
         if (ARM_CAN_RX_ID == u32Id)
         {
-            arm_angle = (uint16_t) rxCanMsg.data[0u];
+            arm_angle = (uint16_t) rxCanMsg.data[ARM_SIDE];
             if (arm_angle >0)
             {   
                 MCAPI_VelocityReferenceSet(app.apiData, (int16_t)(255-arm_angle)<<5);
